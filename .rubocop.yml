@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - "Gemfile"
+    - "*.gemspec"
+    - "spec/spec_helper.rb"
+    - "config/**/*"
+  UseCache: false
+Style/Documentation:
+  Exclude:
+    - "lib/**/*"
+Metrics/ModuleLength:
+  Enabled: false
