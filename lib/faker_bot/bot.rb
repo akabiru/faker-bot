@@ -1,8 +1,15 @@
 require 'fuzzy_match'
-require_relative 'descendants'
 
 module FakerBot
   class Bot
+    class Object
+      def descendants
+        @descendants ||= ObjectSpace.each_object(Class).select do |klass|
+          klass < self
+        end
+      end
+    end
+
     def initialize(matcher: FuzzyMatch)
       @matcher = matcher
     end
@@ -13,10 +20,12 @@ module FakerBot
 
     private
 
-    attr_reader :fuzzy_matcher
-
     def fuzzy_matcher
-      @_fuzzy_matcher ||= @matcher.new FakerBot::FAKER_DESCENDANTS
+      @fuzzy_matcher ||= @matcher.new(FakerBot::FAKER_DESCENDANTS)
+    end
+
+    def faker_descendants
+      @faker_descendants ||= Faker::Base.descendants
     end
   end
 end
