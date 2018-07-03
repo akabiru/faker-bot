@@ -1,1 +1,1 @@
-require 'faker_bot/cli'
+require_relative 'faker_bot/cli'

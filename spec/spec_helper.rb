@@ -1,5 +1,14 @@
-require "bundler/setup"
-require "faker_bot"
+require 'bundler/setup'
+require 'faker_bot'
+require 'coveralls'
+
+Coveralls.wear!
+
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+SimpleCov.start
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

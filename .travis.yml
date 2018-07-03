@@ -2,4 +2,13 @@ sudo: false
 language: ruby
 rvm:
   - 2.4.0
-before_install: gem install bundler -v 1.16.0
+before_install:
+- gem update --system
+- gem install bundler -v 1.16.1
+deploy:
+  provider: rubygems
+  api_key:
+    secure: cd9ccxc+uEbo+ibEVEsDdgbFEjjoWrNfh6JJmtVvkJW25pyNj/kUhUcguCGobUH5o/3HqYBAQMggiT1haV3fzOA+Lp1NEu1EfECtqh9+JNZBqjx1EXn7EGV/M2I5rsxiaWtn6mtPHiKOC6DZMsgZZ1t/n8E9W5w91eqSeSBfsA0lE5juAbNJN4hjB9vFa9/VO0ZcfI9NDyhjYTzZdE058TZ0PANO773k8g252qdtUYDpx7g8TrUlNZzDEcP/Dodq46doNUxJvxz/TI4YyOJ2gA+SkyA93gHcW73ZddR5A7dwOq1DTHvJqlk9Xg5OAF5UqItvYkYlCYyUmFvmcy7HNVEPiImxmvV07W3O/inTiYqn4h8VYyHrYIRdK8T3hSKqocUGbboTclZ7wPUfBKvW9L3AXNLk7OGMclET0zAgXGETJnbPSApqFG9Y36IN+pRfCjrnqrzopb37lc0qai+PzN/VoKWyNqnbO7iYlnuFeGr4+gV3GBN73xkmJEa/hD6G5IOCtFK1cLVTATIiDNBE3NU06n6LD2z9geCpLYHBdswcFAb7CGhgTTxsU1sgcnu3uBOJDxBjGtb42bt54XX90aR2HCgQbarlA22xq+sXvjpvF1382j/fhqNnZyYH91+dHM9qVde7Yiw8waIdZP347BrUZmLRDo3AOhNuDj9b2pw=
+  on:
+    tags: true
+  gem: fakerbot

@@ -1,28 +1,34 @@
 # FakerBot
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/faker_bot`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![codebeat badge](https://codebeat.co/badges/ef4839f2-3946-4435-8c0e-7025de5fac22)](https://codebeat.co/projects/github-com-akabiru-faker_bot-master) [![Inline docs](http://inch-ci.org/github/akabiru/faker_bot.svg?branch=master)](http://inch-ci.org/github/akabiru/faker_bot) [![Build Status](https://travis-ci.com/akabiru/faker_bot.svg?branch=master)](https://travis-ci.com/akabiru/faker_bot) [![Coverage Status](https://coveralls.io/repos/github/akabiru/faker_bot/badge.svg?branch=master)](https://coveralls.io/github/akabiru/faker_bot?branch=master) [![Gem Version](https://badge.fury.io/rb/fakerbot.svg)](https://badge.fury.io/rb/fakerbot)
 
-TODO: Delete this and the text above, and describe your gem
+> Quickly look up [Faker](https://github.com/stympy/faker) methods code without leaving your terminal!
+
+## Motivation
+
+I'm a huge fan of the [Faker Gem](https://github.com/stympy/faker) and use it everywhere. However, sometimes I find myself digging through Faker's ReadMe when I'm unsure of a method's namespace
+or I'm just not sure what's available. :see_no_evil: I've always wished I had some way to search for the method names without leaving my terminal.
+
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'faker_bot'
+```bash
+$ gem install fakerbot
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install faker_bot
 
 ## Usage
 
-TODO: Write usage instructions here
+Run a quick lookup
+
+```bash
+$ fakerbot search name
+# Faker::FunnyName
+# Faker::Name
+```
+
+## TODO
+
+- [ ] List classes with methods E.g. Faker::FunnyName should list `.name`,`.first_name` e.t.c.
 
 ## Development
 
