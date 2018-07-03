@@ -1,5 +1,4 @@
 require 'faker'
-require 'fuzzy_match'
 
 module FakerBot
   class Bot
@@ -11,28 +10,14 @@ module FakerBot
       end
     end
 
-    def initialize(matcher: FuzzyMatch)
-      @matcher = matcher
-    end
-
     class << self
       def find(query)
-        new.find(query)
+        faker_descendants.select { |faker| faker.match?(/#{query}/i) }
       end
-    end
 
-    def find(faker_const)
-      fuzzy_matcher.find(faker_const)
-    end
-
-    private
-
-    def fuzzy_matcher
-      @fuzzy_matcher ||= @matcher.new(faker_descendants)
-    end
-
-    def faker_descendants
-      @faker_descendants ||= Faker::Base.descendants
+      def faker_descendants
+        @faker_descendants ||= Faker::Base.descendants.map(&:to_s)
+      end
     end
   end
 end
