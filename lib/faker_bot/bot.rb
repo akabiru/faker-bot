@@ -15,6 +15,8 @@ module FakerBot
         faker_descendants.select { |faker| faker.match?(/#{query}/i) }
       end
 
+      private
+
       def faker_descendants
         @faker_descendants ||= Faker::Base.descendants.map(&:to_s)
       end
