@@ -9,9 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Austin Kabiru"]
   spec.email         = ["makabby@gmail.com"]
 
-  spec.summary       = ""
-  spec.description   = ""
-  spec.homepage      = ""
+  spec.summary       = "Easily search Faker methods"
+  spec.homepage      = "https://github.com/akabiru/faker_bot"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
