@@ -16,9 +16,11 @@ module FakerBot
     end
     map %w[--version -v] => :version
 
-    desc 'search', 'Search Faker method(s)'
+    desc 'search [Faker]', 'Search Faker method(s)'
     method_option :help, aliases: '-h', type: :boolean,
                          desc: 'Display usage information'
+    method_option :verbose, aliases: '-v', type: :boolean,
+                            desc: 'Display Faker classes with methods'
     def search(query)
       if options[:help]
         invoke :help, ['search']
