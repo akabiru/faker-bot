@@ -1,3 +1,4 @@
+require 'faker_bot/bot'
 require 'faker_bot/version'
 
 module FakerBot
