@@ -29,6 +29,7 @@ $ fakerbot search name
 ## TODO
 
 - [ ] List classes with methods E.g. Faker::FunnyName should list `.name`,`.first_name` e.t.c.
+- [ ] Expand search to Faker::Base sub classes i.e."fakerbot search email" should include `Faker::Internet.email`
 
 ## Development
 
