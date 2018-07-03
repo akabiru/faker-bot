@@ -2,7 +2,7 @@
 
 [![codebeat badge](https://codebeat.co/badges/ef4839f2-3946-4435-8c0e-7025de5fac22)](https://codebeat.co/projects/github-com-akabiru-faker_bot-master) [![Inline docs](http://inch-ci.org/github/akabiru/faker_bot.svg?branch=master)](http://inch-ci.org/github/akabiru/faker_bot) [![Build Status](https://travis-ci.com/akabiru/faker_bot.svg?branch=master)](https://travis-ci.com/akabiru/faker_bot) [![Coverage Status](https://coveralls.io/repos/github/akabiru/faker_bot/badge.svg?branch=master)](https://coveralls.io/github/akabiru/faker_bot?branch=master) [![Gem Version](https://badge.fury.io/rb/fakerbot.svg)](https://badge.fury.io/rb/fakerbot)
 
-> Quickly look up [Faker](https://github.com/stympy/faker) methods code without leaving your terminal!
+> Quickly look up [Faker](https://github.com/stympy/faker) methods without leaving your terminal!
 
 ## Motivation
 
