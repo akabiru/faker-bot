@@ -3,10 +3,11 @@ RSpec.describe FakerBot::Bot do
 
   describe '.find' do
     context 'when a match is found' do
+      let(:result) { bot.find('name') }
+
       it 'it returns the list of matches' do
-        expect(bot.find('name')).to match(
-          %w[Faker::Name Faker::FunnyName]
-        )
+        expect(result).to include('Faker::Name')
+        expect(result).to be_a(Array)
       end
     end
 
