@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'faker_bot'
+require 'fakerbot'
 require 'coveralls'
 
 Coveralls.wear!

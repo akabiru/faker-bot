@@ -1,7 +1,7 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "faker_bot/version"
+require "fakerbot/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "fakerbot"
@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A stympy/faker lookup command line tool.}
   spec.description   = %q{Quickly look up Faker methods without leaving your terminal!}
-  spec.homepage      = "https://github.com/akabiru/faker_bot"
+  spec.homepage      = "https://github.com/akabiru/fakerbot"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
