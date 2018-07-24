@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'pastel'
-require 'faker_bot/bot'
+require 'fakerbot/bot'
 
 module FakerBot
   module Commands

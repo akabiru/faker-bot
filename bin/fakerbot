@@ -3,7 +3,7 @@
 
 lib_path = File.expand_path('../lib', __dir__)
 $:.unshift(lib_path) if !$:.include?(lib_path)
-require 'faker_bot'
+require 'fakerbot'
 
 Signal.trap('INT') do
   warn("\n#{caller.join("\n")}: interrupted")

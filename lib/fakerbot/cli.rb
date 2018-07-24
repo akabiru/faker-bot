@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 require 'thor'
-require 'faker_bot/cli'
-require 'faker_bot/version'
-require 'faker_bot/commands/search'
+require 'fakerbot/cli'
+require 'fakerbot/version'
+require 'fakerbot/commands/search'
 
 module FakerBot
   class CLI < Thor
     Error = Class.new(StandardError)
 
-    desc 'version', 'faker_bot version'
+    desc 'version', 'fakerbot version'
     def version
       require_relative 'version'
       puts "v#{FakerBot::VERSION}"
