@@ -13,7 +13,7 @@ module FakerBot
 
       def execute(input)
         result = FakerBot::Bot.find(input)
-        puts tree(result).render
+        puts result.empty? ? not_found : tree(result).render
       end
 
       def tree(input)
@@ -24,6 +24,10 @@ module FakerBot
             end
           end
         end
+      end
+
+      def not_found
+        "\n ☹️ Sorry, we couldn't find a match\n"
       end
     end
   end
