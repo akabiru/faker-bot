@@ -22,14 +22,26 @@ Run a quick lookup
 
 ```bash
 $ fakerbot search name
-# Faker::FunnyName
-# Faker::Name
+# Faker::SwordArtOnline
+# └── real_name
+# └── game_name
+# Faker::Superhero
+# └── name
+# Faker::ProgrammingLanguage
+# └── name
+# Faker::Cat
+# └── name
+# Faker::Pokemon
+# └── name
+# e.t.c
 ```
 
-## TODO
+## New Features! :sunglasses: :dancers:
 
-- [ ] List classes with methods E.g. Faker::FunnyName should list `.name`,`.first_name` e.t.c.
-- [ ] Expand search to Faker::Base sub classes i.e."fakerbot search email" should include `Faker::Internet.email`
+- [x] List classes with methods E.g. Faker::FunnyName should list `.name`,`.first_name` e.t.c.
+- [x] Expand search to Faker::Base sub classes i.e."fakerbot search email" should include `Faker::Internet.email`
+
+![screen shot 2018-08-09 at 20 21 06](https://user-images.githubusercontent.com/17295175/43914887-c9a99d84-9c11-11e8-9686-85f584412b27.jpg)
 
 ## Development
 
