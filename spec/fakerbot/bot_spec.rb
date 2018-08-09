@@ -6,8 +6,8 @@ RSpec.describe FakerBot::Bot do
       let(:result) { bot.find('name') }
 
       it 'it returns the list of matches' do
-        expect(result).to include('Faker::Name')
-        expect(result).to be_a(Array)
+        expect(result[Faker::Name]).to include(:name)
+        expect(result).to be_a(Hash)
       end
     end
 

@@ -20,34 +20,41 @@ module FakerBot
       end
     end
 
+    attr_reader :matching_descendants, :query
+
+    def initialize(query)
+      @matching_descendants = Hash.new { |h, k| h[k] = [] }
+      @query = query
+    end
+
     class << self
       def find(query)
-        search_descendants_matching(query)
-        matching_descendants
+        new(query).find
       end
+    end
 
-      private
+    def find
+      search_descendants_matching_query
+      matching_descendants
+    end
 
-      def search_descendants_matching(query)
-        faker_descendants.each do |faker|
-          methods = faker.my_singleton_methods
-          matching = methods.select { |m| m.match?(/#{query}/i) }
-          save_matching(faker, matching)
-        end
+    private
+
+    def search_descendants_matching_query
+      faker_descendants.each do |faker|
+        methods = faker.my_singleton_methods
+        matching = methods.select { |m| m.match?(/#{query}/i) }
+        save_matching(faker, matching)
       end
+    end
 
-      def save_matching(descendant, matching)
-        return if matching.empty?
-        matching_descendants[descendant].concat(matching)
-      end
+    def save_matching(descendant, matching)
+      return if matching.empty?
+      matching_descendants[descendant].concat(matching)
+    end
 
-      def matching_descendants
-        @matching_descendants ||= Hash.new { |h, k| h[k] = [] }
-      end
-
-      def faker_descendants
-        @faker_descendants ||= Faker::Base.descendants
-      end
+    def faker_descendants
+      @faker_descendants ||= Faker::Base.descendants
     end
   end
 end
