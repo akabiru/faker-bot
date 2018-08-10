@@ -2,7 +2,7 @@
 
 require_relative '../command'
 
-module Fakerbot
+module FakerBot
   module Commands
     class List < FakerBot::Command
       def initialize(options)

@@ -1,9 +1,9 @@
 require 'fakerbot/commands/list'
 
-RSpec.describe Fakerbot::Commands::List do
+RSpec.describe FakerBot::Commands::List do
   let(:output) { StringIO.new }
   let(:options) { {} }
-  let(:command) { Fakerbot::Commands::List.new(options) }
+  let(:command) { FakerBot::Commands::List.new(options) }
 
   before do
     command.execute(output: output)

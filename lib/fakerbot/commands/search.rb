@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'fakerbot/bot'
+require_relative '../command'
 
 module FakerBot
   module Commands
@@ -9,15 +10,15 @@ module FakerBot
         @options = options
       end
 
-      def execute(input)
-        render FakerBot::Bot.find(input)
+      def execute(input, output: $stdout)
+        render FakerBot::Bot.find(input), output
       end
 
       private
 
-      def render(result)
+      def render(result, output)
         return not_found if result.empty?
-        super
+        super(result, output)
       end
 
       def not_found

@@ -26,7 +26,7 @@ module FakerBot
       if options[:help]
         invoke :help, ['list']
       else
-        Fakerbot::Commands::List.new(options).execute
+        FakerBot::Commands::List.new(options).execute
       end
     end
 
