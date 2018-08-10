@@ -43,14 +43,17 @@ module FakerBot
     end
 
     def list(verbose)
-      faker_descendants.each do |faker|
-        methods = verbose ? faker.my_singleton_methods : []
-        store(faker, methods)
-      end
-      descendants_with_methods
+      verbose ? all_descendants_with_methods : faker_descendants
     end
 
     private
+
+    def all_descendants_with_methods
+      faker_descendants.each do |faker|
+        store(faker, faker.my_singleton_methods)
+      end
+      descendants_with_methods
+    end
 
     def search_descendants_matching_query
       faker_descendants.each do |faker|
@@ -60,9 +63,9 @@ module FakerBot
       end
     end
 
-    def store(descendant, matching)
-      return if matching.empty?
-      descendants_with_methods[descendant].concat(matching)
+    def store(descendant, methods)
+      return if methods.empty?
+      descendants_with_methods[descendant].concat(methods)
     end
 
     def faker_descendants
