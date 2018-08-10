@@ -20,10 +20,10 @@ module FakerBot
       end
     end
 
-    attr_reader :matching_descendants, :query
+    attr_reader :descendants_with_methods, :query
 
-    def initialize(query)
-      @matching_descendants = Hash.new { |h, k| h[k] = [] }
+    def initialize(query = nil)
+      @descendants_with_methods = Hash.new { |h, k| h[k] = [] }
       @query = query
     end
 
@@ -31,26 +31,41 @@ module FakerBot
       def find(query)
         new(query).find
       end
+
+      def list(verbose: false)
+        new.list(verbose)
+      end
     end
 
     def find
       search_descendants_matching_query
-      matching_descendants
+      descendants_with_methods
+    end
+
+    def list(verbose)
+      verbose ? all_descendants_with_methods : faker_descendants
     end
 
     private
+
+    def all_descendants_with_methods
+      faker_descendants.each do |faker|
+        store(faker, faker.my_singleton_methods)
+      end
+      descendants_with_methods
+    end
 
     def search_descendants_matching_query
       faker_descendants.each do |faker|
         methods = faker.my_singleton_methods
         matching = methods.select { |m| m.match?(/#{query}/i) }
-        save_matching(faker, matching)
+        store(faker, matching)
       end
     end
 
-    def save_matching(descendant, matching)
-      return if matching.empty?
-      matching_descendants[descendant].concat(matching)
+    def store(descendant, methods)
+      return if methods.empty?
+      descendants_with_methods[descendant].concat(methods)
     end
 
     def faker_descendants

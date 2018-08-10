@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fakerbot (0.2.4)
+    fakerbot (0.3.0)
       faker
       pastel (~> 0.7.2)
       thor (~> 0.20.0)
