@@ -29,12 +29,14 @@ module FakerBot
       end
     end
 
-    def render(result)
-      output = tree(result)
-      if screen.height < output.nodes.size
-        pager.page output.render
+    def render(result, output = $stdout)
+      result_tree = tree(result)
+      view = result_tree.render
+      if screen.height < result_tree.nodes.size
+        # paginate when attached to terminal
+        output.tty? ? pager.page(view) : output.puts(view)
       else
-        puts output.render
+        output.puts view
       end
     end
   end

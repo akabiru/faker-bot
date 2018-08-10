@@ -9,8 +9,8 @@ module Fakerbot
         @options = options
       end
 
-      def execute
-        render FakerBot::Bot.list(verbose: @options[:verbose])
+      def execute(output: $stdout)
+        render FakerBot::Bot.list(verbose: @options[:verbose]), output
       end
     end
   end
