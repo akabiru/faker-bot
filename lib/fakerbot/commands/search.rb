@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'pastel'
+require 'tty/pager'
 require 'tty/tree'
 require 'fakerbot/bot'
 
@@ -9,11 +10,26 @@ module FakerBot
     class Search
       def initialize(options)
         @options = options
+        @pager = TTY::Pager.new(command: 'less -R')
+        @screen = TTY::Screen
       end
 
       def execute(input)
-        result = FakerBot::Bot.find(input)
-        puts result.empty? ? not_found : tree(result).render
+        render FakerBot::Bot.find(input)
+      end
+
+      private
+
+      attr_reader :screen, :pager
+
+      def render(result)
+        return not_found if result.empty?
+        output = tree(result)
+        if screen.height < output.nodes.size
+          pager.page output.render
+        else
+          puts output.render
+        end
       end
 
       def tree(input)
@@ -27,7 +43,7 @@ module FakerBot
       end
 
       def not_found
-        "\n ☹️ Sorry, we couldn't find a match\n"
+        puts "\nSorry, we couldn't find a match 😢", "\n"
       end
     end
   end

@@ -39,7 +39,8 @@ $ fakerbot search name
 ## New Features! :sunglasses: :dancers:
 
 - [x] List classes with methods E.g. Faker::FunnyName should list `.name`,`.first_name` e.t.c.
-- [x] Expand search to Faker::Base sub classes i.e."fakerbot search email" should include `Faker::Internet.email`
+- [x] Expand search to Faker::Base sub classes
+- [x] Paginate results :book:
 
 ![screen shot 2018-08-09 at 20 21 06](https://user-images.githubusercontent.com/17295175/43914887-c9a99d84-9c11-11e8-9686-85f584412b27.jpg)
 
@@ -52,6 +53,10 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/akabiru/fakerbot. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Credits
+
+Terminal awesomeness made easy by the [TTY Toolkit](http://piotrmurach.github.io/tty/). :beer:
 
 ## License
 
