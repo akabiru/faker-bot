@@ -3,6 +3,7 @@
 require 'thor'
 require 'fakerbot/cli'
 require 'fakerbot/version'
+require 'fakerbot/commands/list'
 require 'fakerbot/commands/search'
 
 module FakerBot
@@ -16,11 +17,24 @@ module FakerBot
     end
     map %w[--version -v] => :version
 
+    desc 'list', 'List all Faker constants'
+    method_option :help, aliases: '-h', type: :boolean,
+                         desc: 'Display usage information'
+    method_option :verbose, aliases: '-v', type: :boolean,
+                            desc: 'Display Faker constants with methods'
+    def list(*)
+      if options[:help]
+        invoke :help, ['list']
+      else
+        Fakerbot::Commands::List.new(options).execute
+      end
+    end
+
     desc 'search [Faker]', 'Search Faker method(s)'
     method_option :help, aliases: '-h', type: :boolean,
                          desc: 'Display usage information'
     method_option :verbose, aliases: '-v', type: :boolean,
-                            desc: 'Display Faker classes with methods'
+                            desc: 'Display Faker constants methods with examples'
     def search(query)
       if options[:help]
         invoke :help, ['search']
