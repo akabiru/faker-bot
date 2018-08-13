@@ -3,20 +3,22 @@
 require 'faker'
 
 module FakerBot
+  # Exposes `Faker` reflection methods
+  # @api private
   class Bot
     Faker::Base.class_eval do
+      # Select `Faker` subclasses
+      # @return [Array] `Faker::Base` sub classes
       def self.descendants
         @descendants ||= ObjectSpace.each_object(Class).select do |klass|
           klass < self
         end
       end
 
+      # Select public class methods
+      # @return [Array] public methods
       def self.my_singleton_methods
-        if superclass
-          (singleton_methods - superclass.singleton_methods)
-        else
-          singleton_methods
-        end
+        singleton_methods(false).select { |m| respond_to?(m) }
       end
     end
 
