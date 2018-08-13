@@ -10,7 +10,7 @@ module FakerBot
       end
 
       def execute(input, output: $stdout)
-        render FakerBot::Bot.find(input), output
+        render FakerBot::Reflector.find(input), output
       end
 
       private

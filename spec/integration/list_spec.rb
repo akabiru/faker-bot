@@ -25,6 +25,5 @@ RSpec.describe '`fakerbot list` command', type: :cli do
   it 'executes `fakerbot list -v` command successfully' do
     output = `fakerbot list -v`
     expect(output).to match(/Faker::/)
-    expect(output).to match(/└──/)
   end
 end

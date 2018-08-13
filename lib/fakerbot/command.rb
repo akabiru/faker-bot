@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'forwardable'
-require_relative 'bot'
+require_relative 'reflector'
 require_relative 'renderer'
 
 module FakerBot

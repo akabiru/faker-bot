@@ -5,7 +5,7 @@ require 'faker'
 module FakerBot
   # Exposes `Faker` reflection methods
   # @api private
-  class Bot
+  class Reflector
     Faker::Base.class_eval do
       # Select `Faker` subclasses
       # @return [Array] `Faker::Base` sub classes
