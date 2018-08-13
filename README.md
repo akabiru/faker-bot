@@ -18,7 +18,7 @@ $ gem install fakerbot
 
 ## Usage
 
-Run a quick lookup
+1.) Run a quick lookup
 
 ```bash
 $ fakerbot search name
@@ -27,13 +27,39 @@ $ fakerbot search name
 # └── game_name
 # Faker::Superhero
 # └── name
-# Faker::ProgrammingLanguage
-# └── name
-# Faker::Cat
-# └── name
-# Faker::Pokemon
-# └── name
-# e.t.c
+# ....
+```
+
+2.) List methods
+
+```sh
+$ fakerbot list
+# Faker::BackToTheFuture
+# ├── quote
+# ├── date
+# └── character
+# Faker::Finance
+# └── credit_card
+# ....
+```
+
+`fakerbot` also includes an option to display sample output via the `--verbose` or `-v` flag. :wink:
+
+3.)
+
+```sh
+$ fakerbot list -v
+# Faker::Appliance
+# ├── brand=> Whirlpool
+# └── equipment=> Sump pump
+# Faker::UmphreysMcgee
+# └── song=> Headphones & Snowcones
+$ fakerbot search name -v
+# Faker::App
+# └── name=> Subin
+# Faker::Address
+# └── street_name=> Percy Landing
+# ....
 ```
 
 ## New Features! :sunglasses: :dancers:
@@ -42,7 +68,7 @@ $ fakerbot search name
 - [x] Expand search to Faker::Base sub classes
 - [x] Paginate results :book:
 
-![screen shot 2018-08-09 at 20 21 06](https://user-images.githubusercontent.com/17295175/43914887-c9a99d84-9c11-11e8-9686-85f584412b27.jpg)
+![screen shot 2018-08-13 at 23 33 51](https://user-images.githubusercontent.com/17295175/44056603-6343f9f2-9f51-11e8-933d-55367e25be35.jpg)
 
 ## Development
 
