@@ -20,8 +20,10 @@ module FakerBot
     desc 'list', 'List all Faker constants'
     method_option :help, aliases: '-h', type: :boolean,
                          desc: 'Display usage information'
+    method_option :show_methods, aliases: '-m', type: :boolean, default: true,
+                                 desc: 'Display Faker constants with methods'
     method_option :verbose, aliases: '-v', type: :boolean,
-                            desc: 'Display Faker constants with methods'
+                            desc: 'Include sample Faker output'
     def list(*)
       if options[:help]
         invoke :help, ['list']
@@ -33,8 +35,10 @@ module FakerBot
     desc 'search [Faker]', 'Search Faker method(s)'
     method_option :help, aliases: '-h', type: :boolean,
                          desc: 'Display usage information'
+    method_option :show_methods, aliases: '-m', type: :boolean, default: true,
+                                 desc: 'Display Faker constants with methods'
     method_option :verbose, aliases: '-v', type: :boolean,
-                            desc: 'Display Faker constants methods with examples'
+                            desc: 'Include sample Faker output'
     def search(query)
       if options[:help]
         invoke :help, ['search']

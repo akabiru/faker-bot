@@ -49,17 +49,20 @@ module FakerBot
 
     def leaf(const, methods)
       (methods || []).map do |m|
-        args = [m.to_s].tap do |a|
-          if show_examples?
-            fake = begin
-              const.public_send(m)
-            rescue ArgumentError
-              'N/A'
-            end
-            a << pastel.dim.white("=> #{fake.to_s}")
+        crayon.cyan(*leaf_args(m, const))
+      end
+    end
+
+    def leaf_args(method, const)
+      [method.to_s].tap do |arr|
+        if verbose?
+          fake = begin
+            const.public_send(method)
+          rescue ArgumentError
+            'N/A'
           end
+          arr << crayon.dim.white("=> #{fake.to_s}")
         end
-        crayon.cyan(*args)
       end
     end
 
@@ -67,8 +70,8 @@ module FakerBot
       data_tree.nodes.size > screen.height
     end
 
-    def show_examples?
-      options[:show_examples]
+    def verbose?
+      options[:verbose]
     end
   end
 end

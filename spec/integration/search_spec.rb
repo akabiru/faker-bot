@@ -8,13 +8,14 @@ RSpec.describe '`fakerbot search` command', type: :cli do
         fakerbot search [Faker]
 
       Options:
-        -h, [--help], [--no-help]        # Display usage information
-        -v, [--verbose], [--no-verbose]  # Display Faker constants methods with examples
+        -h, [--help], [--no-help]                  # Display usage information
+        -m, [--show-methods], [--no-show-methods]  # Display Faker constants with methods
+                                                   # Default: true
+        -v, [--verbose], [--no-verbose]            # Include sample Faker output
 
       Search Faker method(s)
       OUT
-
-    expect(output).to eq(expected_output)
+    expect(output).to match(expected_output)
   end
 
   context 'when search query exists' do

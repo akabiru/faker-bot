@@ -34,8 +34,8 @@ module FakerBot
         new(query).find
       end
 
-      def list(verbose: false)
-        new.list(verbose)
+      def list(show_methods: false)
+        new.list(show_methods)
       end
     end
 
@@ -44,8 +44,8 @@ module FakerBot
       descendants_with_methods
     end
 
-    def list(verbose)
-      verbose ? all_descendants_with_methods : faker_descendants
+    def list(show_methods)
+      show_methods ? all_descendants_with_methods : faker_descendants
     end
 
     private
