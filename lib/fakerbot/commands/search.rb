@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'fakerbot/bot'
 require_relative '../command'
 
 module FakerBot
