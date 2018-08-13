@@ -10,7 +10,8 @@ module FakerBot
       end
 
       def execute(output: $stdout)
-        render FakerBot::Bot.list(verbose: @options[:verbose]), output
+        result = FakerBot::Reflector.list(show_methods: options[:show_methods])
+        render result, output
       end
     end
   end

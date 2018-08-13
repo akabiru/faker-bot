@@ -21,11 +21,8 @@ RSpec.describe FakerBot::Commands::List do
 
     it 'executes successfully' do
       constant = output.string.lines[0]
-      method = output.string.lines[1]
 
       expect(constant).to match(/Faker::/)
-      expect(method).not_to match(/Faker::/)
-      expect(method).to match(/└──/)
     end
   end
 end

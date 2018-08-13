@@ -3,20 +3,22 @@
 require 'faker'
 
 module FakerBot
-  class Bot
+  # Exposes `Faker` reflection methods
+  # @api private
+  class Reflector
     Faker::Base.class_eval do
+      # Select `Faker` subclasses
+      # @return [Array] `Faker::Base` sub classes
       def self.descendants
         @descendants ||= ObjectSpace.each_object(Class).select do |klass|
           klass < self
         end
       end
 
+      # Select public class methods
+      # @return [Array] public methods
       def self.my_singleton_methods
-        if superclass
-          (singleton_methods - superclass.singleton_methods)
-        else
-          singleton_methods
-        end
+        singleton_methods(false).select { |m| respond_to?(m) }
       end
     end
 
@@ -32,8 +34,8 @@ module FakerBot
         new(query).find
       end
 
-      def list(verbose: false)
-        new.list(verbose)
+      def list(show_methods: false)
+        new.list(show_methods)
       end
     end
 
@@ -42,8 +44,8 @@ module FakerBot
       descendants_with_methods
     end
 
-    def list(verbose)
-      verbose ? all_descendants_with_methods : faker_descendants
+    def list(show_methods)
+      show_methods ? all_descendants_with_methods : faker_descendants
     end
 
     private

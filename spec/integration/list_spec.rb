@@ -8,13 +8,15 @@ RSpec.describe '`fakerbot list` command', type: :cli do
         fakerbot list
 
       Options:
-        -h, [--help], [--no-help]        # Display usage information
-        -v, [--verbose], [--no-verbose]  # Display Faker constants with methods
+        -h, [--help], [--no-help]                  # Display usage information
+        -m, [--show-methods], [--no-show-methods]  # Display Faker constants with methods
+                                                   # Default: true
+        -v, [--verbose], [--no-verbose]            # Include sample Faker output
 
       List all Faker constants
       OUT
 
-    expect(output).to eq(expected_output)
+    expect(output).to match(expected_output)
   end
 
   it 'executes `fakerbot list` command successfully' do
@@ -25,6 +27,5 @@ RSpec.describe '`fakerbot list` command', type: :cli do
   it 'executes `fakerbot list -v` command successfully' do
     output = `fakerbot list -v`
     expect(output).to match(/Faker::/)
-    expect(output).to match(/└──/)
   end
 end
