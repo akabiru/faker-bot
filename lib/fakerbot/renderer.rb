@@ -77,7 +77,7 @@ module FakerBot
     end
 
     def ensure_method_is_supported(method, const)
-      const.respond_to?("_deprecated_#{method.to_s}".to_sym) ? ' ( WILL BE DEPRECATED )' : ''
+      const.respond_to?(:"_deprecated_#{method.to_s}") ? ' ( WILL BE DEPRECATED )' : ''
     end
   end
 end
