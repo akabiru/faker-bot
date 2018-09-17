@@ -1,6 +1,6 @@
 # FakerBot
 
-[![codebeat badge](https://codebeat.co/badges/ef4839f2-3946-4435-8c0e-7025de5fac22)](https://codebeat.co/projects/github-com-akabiru-fakerbot-master) [![Inline docs](http://inch-ci.org/github/akabiru/fakerbot.svg?branch=master)](http://inch-ci.org/github/akabiru/fakerbot) [![Build Status](https://travis-ci.com/akabiru/fakerbot.svg?branch=master)](https://travis-ci.com/akabiru/fakerbot) [![Coverage Status](https://coveralls.io/repos/github/akabiru/fakerbot/badge.svg?branch=master)](https://coveralls.io/github/akabiru/fakerbot?branch=master) [![Gem Version](https://badge.fury.io/rb/fakerbot.svg)](https://badge.fury.io/rb/fakerbot)
+[![codebeat badge](https://codebeat.co/badges/ef4839f2-3946-4435-8c0e-7025de5fac22)](https://codebeat.co/projects/github-com-akabiru-fakerbot-master) [![Inline docs](http://inch-ci.org/github/akabiru/fakerbot.svg?branch=master)](http://inch-ci.org/github/akabiru/fakerbot) [![Build Status](https://travis-ci.com/akabiru/fakerbot.svg?branch=master)](https://travis-ci.com/akabiru/fakerbot) [![Coverage Status](https://coveralls.io/repos/github/akabiru/fakerbot/badge.svg?branch=master)](https://coveralls.io/github/akabiru/fakerbot?branch=master) [![Gem Version](https://badge.fury.io/rb/fakerbot.svg)](https://badge.fury.io/rb/fakerbot) [![Open Source Helpers](https://www.codetriage.com/akabiru/fakerbot/badges/users.svg)](https://www.codetriage.com/akabiru/fakerbot)
 
 > Quickly look up [Faker](https://github.com/stympy/faker) methods without leaving your terminal!
 
