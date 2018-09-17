@@ -54,16 +54,7 @@ module FakerBot
     end
 
     def leaf_args(method, const)
-      [method.to_s].tap do |arr|
-        if verbose?
-          fake = begin
-            const.public_send(method)
-          rescue ArgumentError
-            'N/A'
-          end
-          arr << crayon.dim.white("=> #{fake.to_s}")
-        end
-      end
+      [method.to_s].tap { |arr| verbose_output(method, const, arr) if verbose? }
     end
 
     def gt_screen_height?(data_tree)
@@ -72,6 +63,21 @@ module FakerBot
 
     def verbose?
       options[:verbose]
+    end
+
+    def verbose_output(method, const, arr)
+      fake, message = faker_method(method, const)
+      arr << crayon.dim.white("=> #{fake.to_s}") << crayon.dim.magenta.bold("#{message}")
+    end
+
+    def faker_method(method, const)
+      [const.public_send(method), deprecate(method, const)]
+    rescue ArgumentError
+      ['N/A', '']
+    end
+
+    def deprecate(method, const)
+      const.respond_to?("_deprecated_#{method.to_s}".to_sym) ? ' ( WILL BE DEPRECATED )' : ''
     end
   end
 end
