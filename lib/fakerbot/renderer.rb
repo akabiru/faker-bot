@@ -71,12 +71,12 @@ module FakerBot
     end
 
     def faker_method(method, const)
-      [const.public_send(method), deprecate(method, const)]
+      [const.public_send(method), ensure_method_is_supported(method, const)]
     rescue ArgumentError
       ['N/A', '']
     end
 
-    def deprecate(method, const)
+    def ensure_method_is_supported(method, const)
       const.respond_to?("_deprecated_#{method.to_s}".to_sym) ? ' ( WILL BE DEPRECATED )' : ''
     end
   end
