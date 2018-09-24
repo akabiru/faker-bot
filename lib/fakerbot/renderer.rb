@@ -36,9 +36,10 @@ module FakerBot
     attr_reader :crayon, :hash, :options, :output, :pager, :screen, :tree
 
     def build_tree
-      hash.reduce({}) do |h, (faker, methods)|
-        h.merge! node(faker, methods)
+      data_tree = hash.reduce({}) do |h, (faker, methods)|
+        h.merge! node(faker, methods&.sort)
       end
+      data_tree.sort_by(&:to_s).to_h
     end
 
     def node(const, methods)
