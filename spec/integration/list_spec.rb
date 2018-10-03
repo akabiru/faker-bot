@@ -14,7 +14,7 @@ RSpec.describe '`fakerbot list` command', type: :cli do
         -v, [--verbose], [--no-verbose]            # Include sample Faker output
 
       List all Faker constants
-      OUT
+    OUT
 
     expect(output).to match(expected_output)
   end

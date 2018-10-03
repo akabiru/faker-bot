@@ -14,7 +14,7 @@ RSpec.describe '`fakerbot search` command', type: :cli do
         -v, [--verbose], [--no-verbose]            # Include sample Faker output
 
       Search Faker method(s)
-      OUT
+    OUT
     expect(output).to match(expected_output)
   end
 

@@ -68,7 +68,7 @@ module FakerBot
 
     def verbose_output(method, const, arr)
       fake, message = faker_method(method, const)
-      arr << crayon.dim.white("=> #{fake.to_s}") << crayon.dim.magenta.bold("#{message}")
+      arr << crayon.dim.white("=> #{fake}") << crayon.dim.magenta.bold(message.to_s)
     end
 
     def faker_method(method, const)
@@ -78,7 +78,7 @@ module FakerBot
     end
 
     def ensure_method_is_supported(method, const)
-      const.respond_to?(:"_deprecated_#{method.to_s}") ? ' ( WILL BE DEPRECATED )' : ''
+      const.respond_to?(:"_deprecated_#{method}") ? ' ( WILL BE DEPRECATED )' : ''
     end
   end
 end
