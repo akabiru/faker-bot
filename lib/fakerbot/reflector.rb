@@ -60,9 +60,13 @@ module FakerBot
     def search_descendants_matching_query
       faker_descendants.each do |faker|
         methods = faker.my_singleton_methods
-        matching = methods.select { |m| m.match(/#{query}/i) }
+        matching = methods.select { |m| method_matches_query?(m) }
         store(faker, matching)
       end
+    end
+
+    def method_matches_query?(method)
+      method.match(/#{query}/i)
     end
 
     def store(descendant, methods)
