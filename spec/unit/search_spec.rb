@@ -18,7 +18,7 @@ RSpec.describe FakerBot::Commands::Search do
 
   context 'when query object does not exist' do
     before do
-      command.execute('hasjdhaksjd', output: output)
+      command.execute('foobar', output: output)
     end
 
     it 'returns nil' do

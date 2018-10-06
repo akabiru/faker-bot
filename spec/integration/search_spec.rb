@@ -28,7 +28,7 @@ RSpec.describe '`fakerbot search` command', type: :cli do
 
   context 'when search query does not exist' do
     it 'returns a not found message' do
-      output = `fakerbot search asdasdhk`
+      output = `fakerbot search foobar`
       expect(output).to match(/Sorry, we couldn't find a match/)
     end
   end
