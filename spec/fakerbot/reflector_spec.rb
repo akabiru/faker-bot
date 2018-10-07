@@ -3,10 +3,10 @@ RSpec.describe FakerBot::Reflector do
 
   describe '.find' do
     context 'when a match is found' do
-      let(:result) { reflector.find('name') }
+      let(:result) { reflector.find('firstname') }
 
       it 'it returns the list of matches' do
-        expect(result[Faker::Name]).to include(:name)
+        expect(result[Faker::Name]).to include(:first_name)
         expect(result).to be_a(Hash)
       end
     end
