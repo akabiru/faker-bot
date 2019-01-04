@@ -7,39 +7,52 @@ require 'tty/tree'
 
 module FakerBot
   class Renderer
-    def self.call(hash, options, output)
-      new(hash, options, output).call
+    attr_reader :crayon, :hash, :options, :output, :pager
+
+    def self.call(*args)
+      new(*args).call
     end
 
     def initialize(hash, options, output)
       @hash = hash
-      @options = options
+      @options = options.deep_symbolize_keys
       @output = output
       @crayon = Pastel.new(enabled: output.tty?)
       @pager = TTY::Pager.new(command: 'less -R')
-      @screen = TTY::Screen
-      @tree = TTY::Tree
     end
 
     def call
-      data_tree = tree.new(build_tree)
-      view = data_tree.render
-      if gt_screen_height?(data_tree)
-        output.tty? ? pager.page(view) : output.puts(view)
+      if paginable?
+        pager.page(render)
       else
-        output.puts view
+        output.puts(render)
       end
+    end
+
+    def render
+      tree.render
+    end
+
+    def tree
+      @tree ||= TTY::Tree.new(build_tree)
+    end
+
+    def paginable?
+      gt_screen_height? && output.tty?
+    end
+
+    def gt_screen_height?
+      tree.nodes.size > TTY::Screen.height
     end
 
     private
 
-    attr_reader :crayon, :hash, :options, :output, :pager, :screen, :tree
-
     def build_tree
-      data_tree = hash.reduce({}) do |h, (faker, methods)|
+      result = hash.reduce({}) do |h, (faker, methods)|
         h.merge! node(faker, methods&.sort)
       end
-      data_tree.sort_by(&:to_s).to_h
+
+      result.sort_by(&:to_s).to_h
     end
 
     def node(const, methods)
@@ -49,21 +62,15 @@ module FakerBot
     end
 
     def leaf(const, methods)
-      (methods || []).map do |m|
-        crayon.cyan(*leaf_args(m, const))
-      end
+      (methods || []).map { |m| crayon.cyan(*leaf_args(m, const)) }
     end
 
     def leaf_args(method, const)
       [method.to_s].tap { |arr| verbose_output(method, const, arr) if verbose? }
     end
 
-    def gt_screen_height?(data_tree)
-      data_tree.nodes.size > screen.height
-    end
-
     def verbose?
-      options[:verbose]
+      options[:verbose] == true
     end
 
     def verbose_output(method, const, arr)
@@ -73,7 +80,7 @@ module FakerBot
 
     def faker_method(method, const)
       [const.public_send(method), ensure_method_is_supported(method, const)]
-    rescue ArgumentError
+    rescue ArgumentError => _exception
       ['N/A', '']
     end
 
