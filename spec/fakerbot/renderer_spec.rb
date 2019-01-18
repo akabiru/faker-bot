@@ -51,7 +51,7 @@ RSpec.describe FakerBot::Renderer do
     context 'when the verbose option is enabled' do
       it 'renders methods with data' do
         hash = { MockFaker::Foo => [:bar] }
-        options = { 'verbose' => true }
+        options = { verbose: true }
         output = StringIO.new
 
         renderer = described_class.new(hash, options, output)
@@ -65,7 +65,7 @@ RSpec.describe FakerBot::Renderer do
     context 'when the verbose option is disabled' do
       it 'renders methods only' do
         hash = { MockFaker::Foo => [:bar] }
-        options = { 'verbose' => false }
+        options = { verbose: false }
         output = StringIO.new
 
         renderer = described_class.new(hash, options, output)

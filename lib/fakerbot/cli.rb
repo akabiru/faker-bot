@@ -9,6 +9,8 @@ require 'fakerbot/commands/search'
 module FakerBot
   class CLI < Thor
     Error = Class.new(StandardError)
+    # Do not print depracation warnings; the CLI will do that
+    Gem::Deprecate.skip = true
 
     desc 'version', 'fakerbot version'
     def version
