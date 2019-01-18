@@ -15,7 +15,7 @@ module FakerBot
 
     def initialize(hash, options, output)
       @hash = hash
-      @options = options.deep_symbolize_keys
+      @options = options
       @output = output
       @crayon = Pastel.new(enabled: output.tty?)
       @pager = TTY::Pager.new(command: 'less -R')
@@ -70,7 +70,7 @@ module FakerBot
     end
 
     def verbose?
-      options[:verbose] == true
+      options[:verbose]
     end
 
     def verbose_output(method, const, arr)
