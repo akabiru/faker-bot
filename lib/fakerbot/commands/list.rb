@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../command'
+require_relative '../reflectors/list'
 
 module FakerBot
   module Commands
@@ -10,7 +11,7 @@ module FakerBot
       end
 
       def execute(output: $stdout)
-        result = FakerBot::Reflector.list(show_methods: options[:show_methods])
+        result = Reflectors::List.call(show_methods: options[:show_methods])
         render result, output
       end
     end
