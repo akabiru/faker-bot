@@ -10,18 +10,20 @@ module FakerBot
       end
 
       def execute(input, output: $stdout)
-        render FakerBot::Reflector.find(input), output
+        result = FakerBot::Reflector.find(input)
+        render result, output
       end
 
       private
 
       def render(result, output)
-        return not_found if result.empty?
+        return not_found(output) if result.empty?
+
         super(result, output)
       end
 
-      def not_found
-        puts "\nSorry, we couldn't find a match 😢", "\n"
+      def not_found(output)
+        output.puts "\nSorry, we couldn't find a match 😢", "\n"
       end
     end
   end
