@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'thor'
-require 'fakerbot/cli'
-require 'fakerbot/version'
+
 require 'fakerbot/commands/list'
 require 'fakerbot/commands/search'
+require 'fakerbot/version'
 
 module FakerBot
   class CLI < Thor
