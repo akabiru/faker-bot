@@ -30,7 +30,7 @@ module FakerBot
       def search_descendants_matching_query
         faker_descendants.each do |descendant|
           methods = descendant.my_singleton_methods
-          matching = methods.select { |m| query_matches?(m.to_s) }
+          matching = methods.select { |method| query_matches?(method.to_s) }
           store(descendant, matching)
         end
       end
