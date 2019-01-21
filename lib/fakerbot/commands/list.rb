@@ -11,7 +11,7 @@ module FakerBot
       end
 
       def execute(output: $stdout)
-        result = Reflectors::List.call(show_methods: options[:show_methods])
+        result = Reflectors::List.call(options)
         render result, output
       end
     end
