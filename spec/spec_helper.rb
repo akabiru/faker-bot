@@ -1,6 +1,11 @@
+# frozen_string_literal: true
+
 require 'bundler/setup'
-require 'fakerbot'
+
 require 'coveralls'
+require 'pry'
+
+require 'fakerbot'
 
 Coveralls.wear!
 
