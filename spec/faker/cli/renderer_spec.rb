@@ -8,7 +8,7 @@ module MockFaker
   end
 end
 
-RSpec.describe FakerBot::Renderer do
+RSpec.describe Faker::CLI::Renderer do
   describe '#call' do
     # FIXME: work out how to capture less
     xcontext 'when paginable interface' do
