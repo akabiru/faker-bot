@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'faker/cli/commands/list'
 
 RSpec.describe Faker::CLI::Commands::List do

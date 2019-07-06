@@ -11,8 +11,8 @@ Signal.trap('INT') do
 end
 
 begin
-  Faker::CLI::CLI.start
-rescue Faker::CLI::CLI::Error => err
+  Faker::CLI::Base.start
+rescue Faker::CLI::Base::Error => err
   puts "ERROR: #{err.message}"
   exit 1
 end

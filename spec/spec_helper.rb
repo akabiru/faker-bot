@@ -5,7 +5,7 @@ require 'bundler/setup'
 require 'coveralls'
 require 'pry'
 
-require 'faker/cli'
+require 'faker-cli'
 
 Coveralls.wear!
 

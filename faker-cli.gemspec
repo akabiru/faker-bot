@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A stympy/faker lookup command line tool.}
   spec.description   = %q{Quickly look up Faker methods without leaving your terminal!}
-  spec.homepage      = "https://github.com/akabiru/faker/cli"
+  spec.homepage      = "https://github.com/faker-ruby/faker-cli"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

@@ -124,6 +124,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (>= 1.16)
   coveralls
   faker-cli!
   guard-rspec
