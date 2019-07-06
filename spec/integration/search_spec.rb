@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-RSpec.describe '`fakerbot search` command', type: :cli do
-  it 'executes `fakerbot help search` command successfully' do
-    output = `fakerbot help search`
+RSpec.describe '`faker search` command', type: :cli do
+  it 'executes `faker help search` command successfully' do
+    output = `faker help search`
     expected_output = <<~OUT
       Usage:
-        fakerbot search [Faker]
+        faker search [Faker]
 
       Options:
         -h, [--help], [--no-help]                  # Display usage information
@@ -20,7 +20,7 @@ RSpec.describe '`fakerbot search` command', type: :cli do
 
   context 'when search query exists' do
     it 'returns results' do
-      output = `fakerbot search name`
+      output = `faker search name`
       expect(output).to match(/Faker::/)
       expect(output).to match(/└──/)
     end
@@ -28,7 +28,7 @@ RSpec.describe '`fakerbot search` command', type: :cli do
 
   context 'when search query does not exist' do
     it 'returns a not found message' do
-      output = `fakerbot search foobar`
+      output = `faker search foobar`
       expect(output).to match(/Sorry, we couldn't find a match/)
     end
   end

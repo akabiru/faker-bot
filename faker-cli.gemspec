@@ -1,22 +1,22 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "fakerbot/version"
+require "faker/cli/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "fakerbot"
-  spec.version       = FakerBot::VERSION
+  spec.name          = "faker-cli"
+  spec.version       = Faker::CLI::VERSION
   spec.authors       = ["Austin Kabiru"]
   spec.email         = ["makabby@gmail.com"]
 
   spec.summary       = %q{A stympy/faker lookup command line tool.}
   spec.description   = %q{Quickly look up Faker methods without leaving your terminal!}
-  spec.homepage      = "https://github.com/akabiru/fakerbot"
+  spec.homepage      = "https://github.com/faker-ruby/faker-cli"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = 'bin'
-  spec.executables   = ['fakerbot']
+  spec.executables   = ['faker']
   spec.require_paths = ['lib']
 
   spec.add_dependency "faker"
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "tty-screen"
   spec.add_dependency "tty-tree"
 
-  spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_development_dependency "bundler", ">= 1.16"
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "pry"

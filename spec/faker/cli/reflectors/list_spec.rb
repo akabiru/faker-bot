@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe FakerBot::Reflectors::List do
+RSpec.describe Faker::CLI::Reflectors::List do
   describe '#call' do
     context 'when show methods is enabled' do
       it 'returns all descendants and their methods' do

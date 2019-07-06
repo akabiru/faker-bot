@@ -5,7 +5,7 @@ require 'tty/pager'
 require 'tty/screen'
 require 'tty/tree'
 
-module FakerBot
+module Faker::CLI
   class Renderer
     attr_reader :crayon, :hash, :options, :output, :pager
 

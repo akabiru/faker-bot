@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-RSpec.describe '`fakerbot list` command', type: :cli do
-  it 'executes `fakerbot help list` command successfully' do
-    output = `fakerbot help list`
+RSpec.describe '`faker list` command', type: :cli do
+  it 'executes `faker help list` command successfully' do
+    output = `faker help list`
     expected_output = <<~OUT
       Usage:
-        fakerbot list
+        faker list
 
       Options:
         -h, [--help], [--no-help]                  # Display usage information
@@ -19,13 +19,13 @@ RSpec.describe '`fakerbot list` command', type: :cli do
     expect(output).to match(expected_output)
   end
 
-  it 'executes `fakerbot list` command successfully' do
-    output = `fakerbot list`
+  it 'executes `faker list` command successfully' do
+    output = `faker list`
     expect(output).to match(/Faker::/)
   end
 
-  it 'executes `fakerbot list -v` command successfully' do
-    output = `fakerbot list -v`
+  it 'executes `faker list -v` command successfully' do
+    output = `faker list -v`
     expect(output).to match(/Faker::/)
   end
 end
