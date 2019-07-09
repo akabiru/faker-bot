@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Faker
-  module CLI
+  module Bot
     VERSION = '0.4.5'
   end
 end

@@ -3,7 +3,7 @@
 require 'faker'
 
 module Faker
-  module CLI
+  module Bot
     # Abstract `Faker` Reflector - introspects the `Faker` module
     #
     # @api private

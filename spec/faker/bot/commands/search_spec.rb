@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'faker/cli/commands/search'
+require 'faker/bot/commands/search'
 
-RSpec.describe Faker::CLI::Commands::Search do
+RSpec.describe Faker::Bot::Commands::Search do
   context 'when query object exists' do
     it 'returns results' do
       output = StringIO.new

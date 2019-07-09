@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'faker/cli/commands/list'
+require 'faker/bot/commands/list'
 
-RSpec.describe Faker::CLI::Commands::List do
+RSpec.describe Faker::Bot::Commands::List do
   let(:output) { StringIO.new }
   let(:options) { {} }
-  let(:command) { Faker::CLI::Commands::List.new(options) }
+  let(:command) { Faker::Bot::Commands::List.new(options) }
 
   before do
     command.execute(output: output)

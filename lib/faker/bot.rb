@@ -2,19 +2,19 @@
 
 require 'thor'
 
-require 'faker/cli/commands/list'
-require 'faker/cli/commands/search'
-require 'faker/cli/version'
+require 'faker/bot/commands/list'
+require 'faker/bot/commands/search'
+require 'faker/bot/version'
 
 module Faker
-  module CLI
+  module Bot
     class Base < Thor
       Error = Class.new(StandardError)
-      # Skip default deprecation warning output; the CLI will display that.
+      # Skip default deprecation warning output; the Bot will display that.
       Gem::Deprecate.skip_during do
         desc 'version', 'Faker version'
         def version
-          puts "v#{Faker::CLI::VERSION}"
+          puts "v#{Faker::Bot::VERSION}"
         end
         map %w[--version -v] => :version
 
@@ -29,7 +29,7 @@ module Faker
           if options[:help]
             invoke :help, ['list']
           else
-            Faker::CLI::Commands::List.new(options).execute
+            Faker::Bot::Commands::List.new(options).execute
           end
         end
 
@@ -44,7 +44,7 @@ module Faker
           if options[:help]
             invoke :help, ['search']
           else
-            Faker::CLI::Commands::Search.new(options).execute(query)
+            Faker::Bot::Commands::Search.new(options).execute(query)
           end
         end
       end

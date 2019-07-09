@@ -3,7 +3,7 @@
 
 lib_path = File.expand_path('../lib', __dir__)
 $LOAD_PATH.unshift(lib_path) unless $LOAD_PATH.include?(lib_path)
-require 'faker/cli'
+require 'faker/bot'
 
 Signal.trap('INT') do
   warn("\n#{caller.join("\n")}: interrupted")
@@ -11,8 +11,8 @@ Signal.trap('INT') do
 end
 
 begin
-  Faker::CLI::Base.start
-rescue Faker::CLI::Base::Error => err
-  puts "ERROR: #{err.message}"
+  Faker::Bot::Base.start
+rescue Faker::Bot::Base::Error => e
+  puts "ERROR: #{e.message}"
   exit 1
 end

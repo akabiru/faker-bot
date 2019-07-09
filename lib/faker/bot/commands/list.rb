@@ -4,7 +4,7 @@ require_relative '../command'
 require_relative '../reflectors/list'
 
 module Faker
-  module CLI
+  module Bot
     module Commands
       class List < Command
         def execute(output: $stdout)

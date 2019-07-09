@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "faker/cli/version"
+require "faker/bot/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "faker-bot"
-  spec.version       = Faker::CLI::VERSION
+  spec.version       = Faker::Bot::VERSION
   spec.authors       = ["Austin Kabiru"]
   spec.email         = ["makabby@gmail.com"]
 

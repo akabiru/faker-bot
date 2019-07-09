@@ -5,7 +5,7 @@ require 'forwardable'
 require_relative 'renderer'
 
 module Faker
-  module CLI
+  module Bot
     class Command
       extend Forwardable
 
