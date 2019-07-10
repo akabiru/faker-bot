@@ -3,7 +3,7 @@
 require_relative '../reflector'
 
 module Faker
-  module CLI
+  module Bot
     module Reflectors
       # Find command reflector
       # @api private

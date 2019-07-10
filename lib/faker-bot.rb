@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-require_relative 'faker/cli'
+require_relative 'faker/bot'

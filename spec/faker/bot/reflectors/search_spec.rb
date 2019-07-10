@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe Faker::CLI::Reflectors::Search do
+RSpec.describe Faker::Bot::Reflectors::Search do
   describe '#call' do
     context 'when a match is found' do
       it 'it returns the list of matches' do

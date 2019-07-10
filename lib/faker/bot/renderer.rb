@@ -6,7 +6,7 @@ require 'tty/screen'
 require 'tty/tree'
 
 module Faker
-  module CLI
+  module Bot
     class Renderer
       attr_reader :crayon, :hash, :options, :output, :pager
 
@@ -81,7 +81,7 @@ module Faker
 
       def faker_method(method, const)
         [const.public_send(method), ensure_method_is_supported(method, const)]
-      rescue ArgumentError => _exception
+      rescue ArgumentError => _e
         ['N/A', '']
       end
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    faker-cli (0.4.5)
+    faker-bot (0.4.5)
       faker
       pastel (~> 0.7.2)
       thor (~> 0.20.0)
@@ -126,7 +126,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (>= 1.16)
   coveralls
-  faker-cli!
+  faker-bot!
   guard-rspec
   pry
   rake (~> 10.0)
