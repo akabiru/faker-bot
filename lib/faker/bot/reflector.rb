@@ -11,6 +11,9 @@ module Faker
     #
     class Reflector
       Faker::Base.class_eval do
+        # Skip default deprecation warning output; the CLI will display that.
+        Gem::Deprecate.skip = true
+
         # Select `Faker` subclasses
         # @return [Array] `Faker::Base` sub classes
         def self.descendants
