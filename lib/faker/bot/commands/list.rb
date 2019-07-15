@@ -6,7 +6,17 @@ require_relative '../reflectors/list'
 module Faker
   module Bot
     module Commands
+      # Lists all [Faker<Base>] constants
+      #
+      # @api private
+      #
       class List < Command
+        # Execute the `list` command
+        #
+        # @return [IO]
+        #
+        # @api private
+        #
         def execute(output: $stdout)
           result = Reflectors::List.call(options)
           render(result, output)
