@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/faker-ruby/faker-bot.svg?branch=master)](https://travis-ci.org/faker-ruby/faker-bot)
 [![Gem Version](https://badge.fury.io/rb/faker-bot.svg)](https://badge.fury.io/rb/faker-bot)
+[![Open Source Helpers](https://www.codetriage.com/faker-ruby/faker-bot/badges/users.svg)](https://www.codetriage.com/faker-ruby/faker-bot)
 
 > Quickly look up [Faker](https://github.com/stympy/faker) methods without leaving your terminal!
 
