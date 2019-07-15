@@ -6,7 +6,7 @@ require_relative 'renderer'
 
 module Faker
   module Bot
-    # Abstract interface for [Command] objects
+    # @abstract interface for [Command] objects
     #
     # @api private
     #
