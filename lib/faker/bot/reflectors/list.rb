@@ -10,6 +10,12 @@ module Faker
       # @api private
       #
       class List < Reflector
+        # Command output filter
+        #
+        # @return [String, nil]
+        #
+        # @api private
+        #
         attr_reader :filter
         # Boolean flag on whether to list methods or not
         #
@@ -18,17 +24,6 @@ module Faker
         # @api private
         #
         attr_reader :show_methods
-
-        # Alternate constructor
-        #
-        # @see #initialize
-        # @see #call
-        #
-        # @api public
-        #
-        def self.call(*args)
-          new(*args).call
-        end
 
         # Initialize list reflector
         #
@@ -62,6 +57,12 @@ module Faker
 
         private
 
+        # List `Faker::Base` subclasses with methods
+        #
+        # @return [Hash{Class => <Array<Symbol>}]
+        #
+        # @api private
+        #
         def list_descendants_with_methods
           list_descendants
           descendants_with_methods
@@ -69,7 +70,7 @@ module Faker
 
         # List `Faker::Base` subclasses
         #
-        # @return [Hash{Class => <Array<Symbol>}]
+        # @return [Array<Class>]
         #
         # @api private
         #
@@ -82,6 +83,12 @@ module Faker
           descendants_with_methods.keys
         end
 
+        # Match against class name when filter is defined
+        #
+        # @return [Boolean]
+        #
+        # @api private
+        #
         def filter_matches_class_name?(class_name)
           return true unless filter
 

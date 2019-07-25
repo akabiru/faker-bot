@@ -4,8 +4,8 @@ require 'faker'
 
 module Faker
   module Bot
-    # @abstract [Faker<Base>] Reflection object
-    # * Introspects the [Faker<Base>] class and it's descendants
+    # @abstract `Faker::Base` Reflection object
+    # * Introspects the `Faker::Base` class and it's descendants
     #
     # @api private
     #
@@ -40,11 +40,22 @@ module Faker
       # @example Faker::Base subclasses with their methods
       #   { Faker::Marketing => [:buzzwords], Faker::Artist => [:name] }
       #
-      # @return [Hash{Class => <Array<Symbol>}]
+      # @return [Hash[Class => [Array<Symbol>]]
       #
       # @api private
       #
       attr_reader :descendants_with_methods
+
+      # Alternate constructor
+      #
+      # @see #initialize
+      # @see #call
+      #
+      # @api public
+      #
+      def self.call(*args)
+        new(*args).call
+      end
 
       # Initialize the reflector
       #

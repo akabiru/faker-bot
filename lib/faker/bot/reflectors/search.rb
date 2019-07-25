@@ -5,15 +5,12 @@ require_relative '../reflector'
 module Faker
   module Bot
     module Reflectors
-      # Find command reflector
+      # Reflection object that searches all `Faker::Base` subclass methods
+      #
       # @api private
       #
       class Search < Reflector
         attr_reader :query
-
-        def self.call(query)
-          new(query).call
-        end
 
         def initialize(query)
           @query = query.downcase

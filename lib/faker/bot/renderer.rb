@@ -14,6 +14,10 @@ module Faker
         new(*args).call
       end
 
+      # Initialize a Render
+      # @param hash [Hash]
+      #
+      # @param options [Hash]
       def initialize(hash, options, output)
         @hash = hash
         @options = options

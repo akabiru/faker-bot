@@ -24,12 +24,30 @@ module Faker
 
         private
 
+        # Render the search results
+        #  * Return #not_found when there're no matching results
+        #
+        # @param result [Hash] the render tree
+        # @param output [IO]
+        #
+        # @return [IO]
+        #
+        # @api private
+        #
         def render(result, output)
           return not_found(output) if result.empty?
 
           super(result, output)
         end
 
+        # Render a bespoke "not found" message
+        #
+        # @param output [IO]
+        #
+        # @return [IO]
+        #
+        # @api private
+        #
         def not_found(output)
           output.puts "\nSorry, that class doesn't exist 😢", "\n",
                       'Try something like `Faker::Beer` or `Beer`.', "\n"
