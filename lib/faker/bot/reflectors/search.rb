@@ -16,7 +16,7 @@ module Faker
         end
 
         def initialize(query)
-          @query = query
+          @query = query.downcase
 
           super
         end
@@ -31,14 +31,20 @@ module Faker
         def search_descendants_matching_query
           faker_descendants.each do |descendant|
             methods = descendant.my_singleton_methods
-            matching = methods.select { |method| query_matches?(method.to_s) }
-            store(descendant, matching)
+            if query_matches_class_name?(descendant.to_s)
+              store(descendant, methods)
+            else
+              store(descendant, methods.select { |method| query_matches_method?(method.to_s) })
+            end
           end
         end
 
-        def query_matches?(method_name)
-          method_name_parts = method_name.split(/_/).reject(&:empty?)
-          query.match(/#{method_name_parts.join('|')}/)
+        def query_matches_method?(method_name)
+          method_name.match(/#{query}/)
+        end
+
+        def query_matches_class_name?(class_name)
+          class_name.downcase.match(/#{query}/)
         end
       end
     end
