@@ -50,10 +50,13 @@
 
 - Add Unit tests for `FakerBot::Renderer` [\#11](https://github.com/faker-ruby/faker-bot/issues/11)
 
+**Fixed bugs:**
+
+- Skip Gem::Deprecate Warnings; The CLI handles that [\#19](https://github.com/faker-ruby/faker-bot/pull/19) ([akabiru](https://github.com/akabiru))
+
 **Merged pull requests:**
 
 - release v0.4.4 [\#21](https://github.com/faker-ruby/faker-bot/pull/21) ([akabiru](https://github.com/akabiru))
-- Skip Gem::Deprecate Warnings; The CLI handles that [\#19](https://github.com/faker-ruby/faker-bot/pull/19) ([akabiru](https://github.com/akabiru))
 - Touch Up Tests [\#18](https://github.com/faker-ruby/faker-bot/pull/18) ([akabiru](https://github.com/akabiru))
 - chore\(workflow\): Add test runner for dev [\#17](https://github.com/faker-ruby/faker-bot/pull/17) ([akabiru](https://github.com/akabiru))
 - Add CodeClimate [\#16](https://github.com/faker-ruby/faker-bot/pull/16) ([akabiru](https://github.com/akabiru))
@@ -65,9 +68,6 @@
 **Implemented enhancements:**
 
 - Improve Search [\#13](https://github.com/faker-ruby/faker-bot/issues/13)
-
-**Merged pull requests:**
-
 - Improve search functionality [\#14](https://github.com/faker-ruby/faker-bot/pull/14) ([codealchemy](https://github.com/codealchemy))
 
 ## [v0.4.2](https://github.com/faker-ruby/faker-bot/tree/v0.4.2) (2018-10-04)
@@ -81,15 +81,12 @@
 **Fixed bugs:**
 
 - Handle Deprecation Warnings [\#7](https://github.com/faker-ruby/faker-bot/issues/7)
-
-**Merged pull requests:**
-
 - Support `search` for ruby less than 2.4.0 [\#12](https://github.com/faker-ruby/faker-bot/pull/12) ([kfpo](https://github.com/kfpo))
 
 ## [v0.4.1](https://github.com/faker-ruby/faker-bot/tree/v0.4.1) (2018-09-18)
 [Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.0...v0.4.1)
 
-**Merged pull requests:**
+**Fixed bugs:**
 
 - Handle Deprecation Warnings [\#10](https://github.com/faker-ruby/faker-bot/pull/10) ([shtakai](https://github.com/shtakai))
 
@@ -99,14 +96,11 @@
 **Implemented enhancements:**
 
 - Add flag to show sample faker output [\#5](https://github.com/faker-ruby/faker-bot/issues/5)
+- Include Faker sample output [\#6](https://github.com/faker-ruby/faker-bot/pull/6) ([akabiru](https://github.com/akabiru))
 
 **Fixed bugs:**
 
 - Only show public class methods [\#3](https://github.com/faker-ruby/faker-bot/issues/3)
-
-**Merged pull requests:**
-
-- Include Faker sample output [\#6](https://github.com/faker-ruby/faker-bot/pull/6) ([akabiru](https://github.com/akabiru))
 
 ## [v0.3.0](https://github.com/faker-ruby/faker-bot/tree/v0.3.0) (2018-08-10)
 [Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.2.4...v0.3.0)
