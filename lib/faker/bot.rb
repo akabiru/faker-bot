@@ -24,11 +24,12 @@ module Faker
                                    desc: 'Display Faker constants with methods'
       method_option :verbose, aliases: '-v', type: :boolean,
                               desc: 'Include sample Faker output'
-      def list(*)
+      def list(filter = nil)
         if options[:help]
           invoke :help, ['list']
         else
-          Faker::Bot::Commands::List.new(options).execute
+          filter_options = options.merge(filter: filter)
+          Faker::Bot::Commands::List.new(filter_options).execute
         end
       end
 
