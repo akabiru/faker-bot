@@ -21,7 +21,8 @@ module Faker
         end
 
         def not_found(output)
-          output.puts "\nSorry, that class doesn't exist 😢", "\n", "Try something like `Faker::Beer` or `Beer`.", "\n"
+          output.puts "\nSorry, that class doesn't exist 😢", "\n",
+                      'Try something like `Faker::Beer` or `Beer`.', "\n"
         end
       end
     end
