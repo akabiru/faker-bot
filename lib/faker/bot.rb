@@ -24,7 +24,7 @@ module Faker
                                    desc: 'Display Faker constants with methods'
       method_option :verbose, aliases: '-v', type: :boolean,
                               desc: 'Include sample Faker output'
-      def list(filter=nil)
+      def list(filter = nil)
         if options[:help]
           invoke :help, ['list']
         else
