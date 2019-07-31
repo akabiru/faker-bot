@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/faker-ruby/faker-bot/tree/HEAD)
-
-[Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.5...HEAD)
+## [v0.5.0](https://github.com/faker-ruby/faker-bot/tree/v0.5.0) (2019-07-31)
+[Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.5...v0.5.0)
 
 **Implemented enhancements:**
 
@@ -20,6 +19,7 @@
 
 **Merged pull requests:**
 
+- Release v0.5.0 [\#41](https://github.com/faker-ruby/faker-bot/pull/41) ([akabiru](https://github.com/akabiru))
 - Add CI & QA Badges [\#34](https://github.com/faker-ruby/faker-bot/pull/34) ([akabiru](https://github.com/akabiru))
 - Chore: CleanUp [\#32](https://github.com/faker-ruby/faker-bot/pull/32) ([akabiru](https://github.com/akabiru))
 
