@@ -1,0 +1,23 @@
+
+version: "2"
+plugins:
+  brakeman:
+    enabled: true
+  bundler-audit:
+    enabled: true
+  fixme:
+    enabled: true
+  flog:
+    enabled: true
+  reek:
+    enabled: true
+  rubocop:
+    enabled: true
+exclude_patterns:
+  - "spec/"
+  - "vendor/"
+  - "Guardfile"
+  - "Rakefile"
+  - "bin/**/*"
+  - "config/**/*.rb"
+  - "script/**/*"
