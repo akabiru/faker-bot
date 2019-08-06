@@ -10,7 +10,7 @@ module Faker
       # @api private
       #
       class List < Reflector
-        # Command output filter
+        # Output filter
         #
         # @return [String, nil]
         #
@@ -42,8 +42,7 @@ module Faker
 
         # List `Faker::Base` subclasses
         #
-        # @return [Hash{Class => <Array<Symbol>}] when #show_methods is truthy
-        # @return [Array<Class>] when #show_methods is falsy
+        # @return [Hash<Class => <Array<Symbol>>] when #show_methods is truthy
         #
         # @api private
         #

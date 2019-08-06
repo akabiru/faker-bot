@@ -8,6 +8,8 @@
 
 ![faker-bot-demo](https://user-images.githubusercontent.com/17295175/62558993-c57be080-b882-11e9-972e-7588408d45c3.gif)
 
+:book: [Code Documentation](https://www.rubydoc.info/github/faker-ruby/faker-bot)
+
 ## Installation
 
 ```bash
