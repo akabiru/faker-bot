@@ -4,7 +4,9 @@
 [![Gem Version](https://badge.fury.io/rb/faker-bot.svg)](https://badge.fury.io/rb/faker-bot)
 [![Open Source Helpers](https://www.codetriage.com/faker-ruby/faker-bot/badges/users.svg)](https://www.codetriage.com/faker-ruby/faker-bot)
 
-> Quickly look up [Faker](https://github.com/stympy/faker) methods without leaving your terminal!
+> Quickly look up [Faker](https://github.com/faker-ruby/faker) methods without leaving your terminal!
+
+![faker-bot-demo](https://user-images.githubusercontent.com/17295175/62558993-c57be080-b882-11e9-972e-7588408d45c3.gif)
 
 ## Installation
 
@@ -57,14 +59,6 @@ $ faker search name -v
 # └── street_name=> Percy Landing
 # ....
 ```
-
-## New Features! :sunglasses: :dancers:
-
-- [x] List classes with methods E.g. Faker::FunnyName should list `.name`,`.first_name` e.t.c.
-- [x] Expand search to Faker::Base sub classes
-- [x] Paginate results :book:
-
-![screen shot 2018-08-13 at 23 33 51](https://user-images.githubusercontent.com/17295175/44056603-6343f9f2-9f51-11e8-933d-55367e25be35.jpg)
 
 ## Development
 
