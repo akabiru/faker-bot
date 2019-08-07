@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/faker-ruby/faker-bot.svg?branch=master)](https://travis-ci.org/faker-ruby/faker-bot)
 [![Gem Version](https://badge.fury.io/rb/faker-bot.svg)](https://badge.fury.io/rb/faker-bot)
 [![Open Source Helpers](https://www.codetriage.com/faker-ruby/faker-bot/badges/users.svg)](https://www.codetriage.com/faker-ruby/faker-bot)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f40541168a0fafbe1808/maintainability)](https://codeclimate.com/github/faker-ruby/faker-bot/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f40541168a0fafbe1808/test_coverage)](https://codeclimate.com/github/faker-ruby/faker-bot/test_coverage)
 
 > Quickly look up [Faker](https://github.com/faker-ruby/faker) methods without leaving your terminal!
 
