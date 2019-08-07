@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Austin Kabiru"]
   spec.email         = ["makabby@gmail.com"]
 
-  spec.summary       = %q{A stympy/faker lookup command line tool.}
+  spec.summary       = %q{A faker-ruby/faker lookup command line tool.}
   spec.description   = %q{Quickly look up Faker methods without leaving your terminal!}
   spec.homepage      = "https://github.com/faker-ruby/faker-bot"
   spec.license       = "MIT"
