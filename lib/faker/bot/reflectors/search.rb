@@ -5,22 +5,38 @@ require_relative '../reflector'
 module Faker
   module Bot
     module Reflectors
-      # Find command reflector
+      # Reflection object that searches all `Faker::Base` subclass methods
+      #  * Currently operates at O(n); improvements welcome. :)
+      #
       # @api private
       #
       class Search < Reflector
+        # Reflector query
+        #
+        # @return [String, nil]
+        #
+        # @api private
+        #
         attr_reader :query
 
-        def self.call(query)
-          new(query).call
-        end
-
+        # Initialize search reflector
+        #
+        # @param query [String] The search query
+        #
+        # @api public
+        #
         def initialize(query)
           @query = query.downcase
 
           super
         end
 
+        # Search through `Faker::Base` subclasses and return matching results
+        #
+        # @return [Hash<Class => <Array<Symbol>>] when #show_methods is truthy
+        #
+        # @api private
+        #
         def call
           search_descendants_matching_query
           descendants_with_methods
@@ -28,23 +44,33 @@ module Faker
 
         private
 
+        # Search through `Faker::Base` subclasses and store matching results
+        #
+        # @api private
+        #
         def search_descendants_matching_query
           faker_descendants.each do |descendant|
             methods = descendant.my_singleton_methods
-            if query_matches_class_name?(descendant.to_s)
+
+            if query_matches?(descendant)
               store(descendant, methods)
             else
-              store(descendant, methods.select { |method| query_matches_method?(method.to_s) })
+              store(
+                descendant,
+                methods.select { |method| query_matches?(method) }
+              )
             end
           end
         end
 
-        def query_matches_method?(method_name)
-          method_name.match(/#{query}/)
-        end
-
-        def query_matches_class_name?(class_name)
-          class_name.downcase.match(/#{query}/)
+        # Match a subject against the query string
+        #
+        # @return [Boolean]
+        #
+        # @api private
+        #
+        def query_matches?(subject)
+          subject.to_s.match(/#{query}/i)
         end
       end
     end
