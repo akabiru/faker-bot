@@ -1,5 +1,24 @@
 # Change Log
 
+## [Unreleased](https://github.com/faker-ruby/faker-bot/tree/HEAD)
+
+[Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.5.0...HEAD)
+
+**Implemented enhancements:**
+
+- Add Asciinema Demo [\#43](https://github.com/faker-ruby/faker-bot/pull/43) ([akabiru](https://github.com/akabiru))
+
+**Closed issues:**
+
+- Migrate FakerBot CI & QA integrations  [\#30](https://github.com/faker-ruby/faker-bot/issues/30)
+
+**Merged pull requests:**
+
+- Fix gemspec summary [\#45](https://github.com/faker-ruby/faker-bot/pull/45) ([vbrazo](https://github.com/vbrazo))
+- fix: Remove brakeman plugin; it's Rails specific [\#44](https://github.com/faker-ruby/faker-bot/pull/44) ([akabiru](https://github.com/akabiru))
+- Add CodeClimate Configuration [\#42](https://github.com/faker-ruby/faker-bot/pull/42) ([akabiru](https://github.com/akabiru))
+- chore\(docs\): Add Code Level YARD Documentation 📖 [\#35](https://github.com/faker-ruby/faker-bot/pull/35) ([akabiru](https://github.com/akabiru))
+
 ## [v0.5.0](https://github.com/faker-ruby/faker-bot/tree/v0.5.0) (2019-07-31)
 [Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.5...v0.5.0)
 
@@ -22,6 +41,7 @@
 - Release v0.5.0 [\#41](https://github.com/faker-ruby/faker-bot/pull/41) ([akabiru](https://github.com/akabiru))
 - Add CI & QA Badges [\#34](https://github.com/faker-ruby/faker-bot/pull/34) ([akabiru](https://github.com/akabiru))
 - Chore: CleanUp [\#32](https://github.com/faker-ruby/faker-bot/pull/32) ([akabiru](https://github.com/akabiru))
+- Update README to republish faker-cli [\#29](https://github.com/faker-ruby/faker-bot/pull/29) ([vbrazo](https://github.com/vbrazo))
 
 ## [v0.4.5](https://github.com/faker-ruby/faker-bot/tree/v0.4.5) (2019-07-11)
 [Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.4...v0.4.5)
@@ -39,7 +59,6 @@
 
 **Merged pull requests:**
 
-- Update README to republish faker-cli [\#29](https://github.com/faker-ruby/faker-bot/pull/29) ([vbrazo](https://github.com/vbrazo))
 - chore: Rename from FakerBot to Faker::CLI [\#28](https://github.com/faker-ruby/faker-bot/pull/28) ([akabiru](https://github.com/akabiru))
 - Add deprecation notes; thank you contributors! 🎉 [\#25](https://github.com/faker-ruby/faker-bot/pull/25) ([akabiru](https://github.com/akabiru))
 
