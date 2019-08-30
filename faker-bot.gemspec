@@ -26,11 +26,11 @@ Gem::Specification.new do |spec|
   spec.add_dependency "tty-screen"
   spec.add_dependency "tty-tree"
 
-  spec.add_development_dependency "bundler", ">= 1.16"
-  spec.add_development_dependency "coveralls"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "pry"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "simplecov", "~> 0.12"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rubocop"
+  spec.add_development_dependency "simplecov"
 end

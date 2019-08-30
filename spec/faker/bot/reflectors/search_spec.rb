@@ -43,7 +43,7 @@ RSpec.describe Faker::Bot::Reflectors::Search do
     end
 
     context 'when no match is found' do
-      let(:query) { 'firstname'}
+      let(:query) { 'firstname' }
 
       it 'returns an empty hash' do
         expect(result).to be_empty
