@@ -4,7 +4,7 @@ We love pull requests. Here's a quick guide:
 
 2. Run the tests. We only take pull requests with passing tests, and it's great to know that you have a clean slate: `bundle && bundle exec rake`
 
-3. Please add a test for your change. Only refactoring and documentation changes require no new tests. If you are adding functionality or fixing a bug, we need a test! We use [Minitest](https://github.com/seattlerb/minitest) in this project.
+3. Please add a test for your change. Only refactoring and documentation changes require no new tests. If you are adding functionality or fixing a bug, we need a test! We use [RSpec](https://github.com/rspec/rspec) in this project.
 
 4. We care about code coverage and use `SimpleCov` to analyze the code and generate test coverage reports. It's possible to check the test coverage by running  `open coverage/index.html`. Please make sure to not decrease our `current % covered` and add appropriate test cases when necessary.
 
