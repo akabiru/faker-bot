@@ -56,8 +56,7 @@ module Faker
               store(descendant, methods)
             else
               store(
-                descendant,
-                methods.select { |method| query_matches?(method) }
+                descendant, methods.select { |method| query_matches?(method) }
               )
             end
           end

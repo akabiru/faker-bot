@@ -15,7 +15,8 @@ RSpec.describe Faker::Bot::Renderer do
     # FIXME: work out how to capture less
     xcontext 'when paginable interface' do
       before do
-        expect_any_instance_of(described_class).to receive(:paginable?).and_return(true)
+        expect_any_instance_of(described_class)
+          .to receive(:paginable?).and_return(true)
       end
 
       it 'renders paginated content' do
@@ -33,7 +34,8 @@ RSpec.describe Faker::Bot::Renderer do
 
     context 'when non-paginable interface' do
       before do
-        expect_any_instance_of(described_class).to receive(:paginable?).and_return(false)
+        expect_any_instance_of(described_class)
+          .to receive(:paginable?).and_return(false)
       end
 
       it 'renders the full content' do
