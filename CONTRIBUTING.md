@@ -4,13 +4,17 @@ We love pull requests. Here's a quick guide:
 
 2. Run the tests. We only take pull requests with passing tests, and it's great to know that you have a clean slate: `bundle && bundle exec rake`
 
-3. Please add a test for your change. Only refactoring and documentation changes require no new tests. If you are adding functionality or fixing a bug, we need a test! We use [RSpec](https://github.com/rspec/rspec) in this project.
+3. We are using [Rubocop](https://github.com/bbatsov/rubocop) because we love static code analyzers. 
+    * Ways to run Rubocop:
+        - `bundle exec rubocop`
 
-4. We care about code coverage and use `SimpleCov` to analyze the code and generate test coverage reports. It's possible to check the test coverage by running  `open coverage/index.html`. Please make sure to not decrease our `current % covered` and add appropriate test cases when necessary.
+4. Please add a test for your change. Only refactoring and documentation changes require no new tests. If you are adding functionality or fixing a bug, we need a test! We use [RSpec](https://github.com/rspec/rspec) in this project.
 
-5. Methods with optional arguments should use keyword rather than positional arguments. An exception to this could be a method that takes only one optional argument, and it's unlikely that that method would ever take more than one optional argument. 
+5. We care about code coverage and use `SimpleCov` to analyze the code and generate test coverage reports. It's possible to check the test coverage by running  `open coverage/index.html`. Please make sure to not decrease our `current % covered` and add appropriate test cases when necessary.
 
-6. Push to your fork and submit a pull request.
+6. Methods with optional arguments should use keyword rather than positional arguments. An exception to this could be a method that takes only one optional argument, and it's unlikely that that method would ever take more than one optional argument. 
+
+7. Push to your fork and submit a pull request.
 
 ### Github Flow for contributors and collaborators
 
@@ -54,3 +58,4 @@ c_things: [
 ]
 ```
 * In general, follow the conventions you see used in the source already.
+* **ALL SHALL OBEY THE RUBOCOP**
