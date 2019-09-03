@@ -147,7 +147,7 @@ DEPENDENCIES
   pry
   rake (~> 12.3)
   rspec (~> 3.0)
-  rubocop
+  rubocop (~> 0.74.0)
   simplecov (~> 0.12)
 
 BUNDLED WITH
