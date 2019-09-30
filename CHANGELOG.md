@@ -10,7 +10,14 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump faker from 2.4.0 to 2.5.0 [\#59](https://github.com/faker-ruby/faker-bot/pull/59) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): update rake requirement from ~\> 12.3 to ~\> 13.0 [\#58](https://github.com/faker-ruby/faker-bot/pull/58) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump faker from 2.3.0 to 2.4.0 [\#57](https://github.com/faker-ruby/faker-bot/pull/57) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): bump simplecov from 0.17.0 to 0.17.1 [\#56](https://github.com/faker-ruby/faker-bot/pull/56) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump faker from 2.2.2 to 2.3.0 [\#55](https://github.com/faker-ruby/faker-bot/pull/55) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump faker from 2.2.1 to 2.2.2 [\#54](https://github.com/faker-ruby/faker-bot/pull/54) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Pin rubocop version [\#53](https://github.com/faker-ruby/faker-bot/pull/53) ([bpleslie](https://github.com/bpleslie))
+- chore\(deps-dev\): update rake requirement from ~\> 10.0 to ~\> 12.3 [\#52](https://github.com/faker-ruby/faker-bot/pull/52) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - chore\(deps\): bump faker from 2.1.0 to 2.2.1 [\#51](https://github.com/faker-ruby/faker-bot/pull/51) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Add rubocop notes to CONTRIBUTING.md [\#50](https://github.com/faker-ruby/faker-bot/pull/50) ([bpleslie](https://github.com/bpleslie))
 - Add rubocop [\#48](https://github.com/faker-ruby/faker-bot/pull/48) ([bpleslie](https://github.com/bpleslie))
@@ -66,6 +73,10 @@
 - Gem name should be faker-bot [\#31](https://github.com/faker-ruby/faker-bot/pull/31) ([vbrazo](https://github.com/vbrazo))
 - Distribute Faker::Reflector Responsibilities [\#22](https://github.com/faker-ruby/faker-bot/pull/22) ([akabiru](https://github.com/akabiru))
 
+**Fixed bugs:**
+
+- Support `search` for ruby less than 2.4.0 [\#12](https://github.com/faker-ruby/faker-bot/pull/12) ([kfpo](https://github.com/kfpo))
+
 **Closed issues:**
 
 - Integrate faker-bot in faker-ruby organization [\#27](https://github.com/faker-ruby/faker-bot/issues/27)
@@ -94,6 +105,7 @@
 - Touch Up Tests [\#18](https://github.com/faker-ruby/faker-bot/pull/18) ([akabiru](https://github.com/akabiru))
 - chore\(workflow\): Add test runner for dev [\#17](https://github.com/faker-ruby/faker-bot/pull/17) ([akabiru](https://github.com/akabiru))
 - Add CodeClimate [\#16](https://github.com/faker-ruby/faker-bot/pull/16) ([akabiru](https://github.com/akabiru))
+- Update main.workflow [\#15](https://github.com/faker-ruby/faker-bot/pull/15) ([akabiru](https://github.com/akabiru))
 
 ## [v0.4.3](https://github.com/faker-ruby/faker-bot/tree/v0.4.3) (2018-10-07)
 [Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.2...v0.4.3)
@@ -102,10 +114,6 @@
 
 - Improve Search [\#13](https://github.com/faker-ruby/faker-bot/issues/13)
 - Improve search functionality [\#14](https://github.com/faker-ruby/faker-bot/pull/14) ([codealchemy](https://github.com/codealchemy))
-
-**Merged pull requests:**
-
-- Update main.workflow [\#15](https://github.com/faker-ruby/faker-bot/pull/15) ([akabiru](https://github.com/akabiru))
 
 ## [v0.4.2](https://github.com/faker-ruby/faker-bot/tree/v0.4.2) (2018-10-04)
 [Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.1...v0.4.2)
@@ -118,7 +126,6 @@
 **Fixed bugs:**
 
 - Handle Deprecation Warnings [\#7](https://github.com/faker-ruby/faker-bot/issues/7)
-- Support `search` for ruby less than 2.4.0 [\#12](https://github.com/faker-ruby/faker-bot/pull/12) ([kfpo](https://github.com/kfpo))
 
 ## [v0.4.1](https://github.com/faker-ruby/faker-bot/tree/v0.4.1) (2018-09-18)
 [Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.0...v0.4.1)
