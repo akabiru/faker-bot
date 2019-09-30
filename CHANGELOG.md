@@ -61,7 +61,6 @@
 **Merged pull requests:**
 
 - Release v0.5.0 [\#41](https://github.com/faker-ruby/faker-bot/pull/41) ([akabiru](https://github.com/akabiru))
-- Add CI & QA Badges [\#34](https://github.com/faker-ruby/faker-bot/pull/34) ([akabiru](https://github.com/akabiru))
 - Chore: CleanUp [\#32](https://github.com/faker-ruby/faker-bot/pull/32) ([akabiru](https://github.com/akabiru))
 
 ## [v0.4.5](https://github.com/faker-ruby/faker-bot/tree/v0.4.5) (2019-07-11)
@@ -72,10 +71,6 @@
 - faker-bot should be a separate gem [\#26](https://github.com/faker-ruby/faker-bot/issues/26)
 - Gem name should be faker-bot [\#31](https://github.com/faker-ruby/faker-bot/pull/31) ([vbrazo](https://github.com/vbrazo))
 - Distribute Faker::Reflector Responsibilities [\#22](https://github.com/faker-ruby/faker-bot/pull/22) ([akabiru](https://github.com/akabiru))
-
-**Fixed bugs:**
-
-- Support `search` for ruby less than 2.4.0 [\#12](https://github.com/faker-ruby/faker-bot/pull/12) ([kfpo](https://github.com/kfpo))
 
 **Closed issues:**
 
@@ -126,6 +121,11 @@
 **Fixed bugs:**
 
 - Handle Deprecation Warnings [\#7](https://github.com/faker-ruby/faker-bot/issues/7)
+- Support `search` for ruby less than 2.4.0 [\#12](https://github.com/faker-ruby/faker-bot/pull/12) ([kfpo](https://github.com/kfpo))
+
+**Merged pull requests:**
+
+- Add CI & QA Badges [\#34](https://github.com/faker-ruby/faker-bot/pull/34) ([akabiru](https://github.com/akabiru))
 
 ## [v0.4.1](https://github.com/faker-ruby/faker-bot/tree/v0.4.1) (2018-09-18)
 [Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.0...v0.4.1)
