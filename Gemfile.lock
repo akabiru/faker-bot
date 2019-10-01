@@ -67,7 +67,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     parallel (1.17.0)
-    parser (2.6.4.0)
+    parser (2.6.4.1)
       ast (~> 2.4.0)
     pastel (0.7.3)
       equatable (~> 0.6)
@@ -98,7 +98,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.2)
-    rubocop (0.74.0)
+    rubocop (0.75.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
@@ -147,7 +147,7 @@ DEPENDENCIES
   pry
   rake (~> 13.0)
   rspec (~> 3.0)
-  rubocop (~> 0.74.0)
+  rubocop (~> 0.75.0)
   simplecov (~> 0.12)
 
 BUNDLED WITH
