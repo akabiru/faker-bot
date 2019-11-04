@@ -11,6 +11,7 @@ plugins:
     enabled: true
   rubocop:
     enabled: true
+    channel: rubocop-0-74
 exclude_patterns:
   - "spec/"
   - "vendor/"
