@@ -26,7 +26,7 @@ GEM
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     equatable (0.6.1)
-    faker (2.9.0)
+    faker (2.10.0)
       i18n (>= 1.6, < 1.8)
     ffi (1.11.1)
     formatador (0.2.5)
