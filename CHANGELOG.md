@@ -6,11 +6,30 @@
 
 **Closed issues:**
 
+- Code Climate maintainability badge is broken [\#66](https://github.com/faker-ruby/faker-bot/issues/66)
 - Define a Release Process [\#40](https://github.com/faker-ruby/faker-bot/issues/40)
 
 **Merged pull requests:**
 
-- chore\(deps\): bump faker from 2.4.0 to 2.5.0 [\#59](https://github.com/faker-ruby/faker-bot/pull/59) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump tty-tree from 0.3.0 to 0.4.0 [\#79](https://github.com/faker-ruby/faker-bot/pull/79) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump faker from 2.10.0 to 2.10.1 [\#78](https://github.com/faker-ruby/faker-bot/pull/78) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): update rubocop requirement from ~\> 0.78.0 to ~\> 0.79.0 [\#77](https://github.com/faker-ruby/faker-bot/pull/77) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump faker from 2.9.0 to 2.10.0 [\#76](https://github.com/faker-ruby/faker-bot/pull/76) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): update rubocop requirement from ~\> 0.77.0 to ~\> 0.78.0 [\#75](https://github.com/faker-ruby/faker-bot/pull/75) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump thor from 1.0.0 to 1.0.1 [\#74](https://github.com/faker-ruby/faker-bot/pull/74) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump faker from 2.8.1 to 2.9.0 [\#73](https://github.com/faker-ruby/faker-bot/pull/73) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): update thor requirement from ~\> 0.20.0 to \>= 0.20, \< 1.1 [\#72](https://github.com/faker-ruby/faker-bot/pull/72) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump faker from 2.8.0 to 2.8.1 [\#71](https://github.com/faker-ruby/faker-bot/pull/71) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump faker from 2.7.0 to 2.8.0 [\#70](https://github.com/faker-ruby/faker-bot/pull/70) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): update rubocop requirement from ~\> 0.76.0 to ~\> 0.77.0 [\#69](https://github.com/faker-ruby/faker-bot/pull/69) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): bump rake from 13.0.0 to 13.0.1 [\#68](https://github.com/faker-ruby/faker-bot/pull/68) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Specify Codeclimate rubocop channel for ruby 2.6.4 support [\#67](https://github.com/faker-ruby/faker-bot/pull/67) ([akabiru](https://github.com/akabiru))
+- chore\(deps\): bump faker from 2.6.0 to 2.7.0 [\#65](https://github.com/faker-ruby/faker-bot/pull/65) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): update rubocop requirement from ~\> 0.75.0 to ~\> 0.76.0 [\#64](https://github.com/faker-ruby/faker-bot/pull/64) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): bump rubocop from 0.75.0 to 0.75.1 [\#63](https://github.com/faker-ruby/faker-bot/pull/63) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps\): bump faker from 2.5.0 to 2.6.0 [\#62](https://github.com/faker-ruby/faker-bot/pull/62) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): bump rspec from 3.8.0 to 3.9.0 [\#61](https://github.com/faker-ruby/faker-bot/pull/61) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- chore\(deps-dev\): update rubocop requirement from ~\> 0.74.0 to ~\> 0.75.0 [\#60](https://github.com/faker-ruby/faker-bot/pull/60) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - chore\(deps-dev\): update rake requirement from ~\> 12.3 to ~\> 13.0 [\#58](https://github.com/faker-ruby/faker-bot/pull/58) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - chore\(deps\): bump faker from 2.3.0 to 2.4.0 [\#57](https://github.com/faker-ruby/faker-bot/pull/57) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - chore\(deps-dev\): bump simplecov from 0.17.0 to 0.17.1 [\#56](https://github.com/faker-ruby/faker-bot/pull/56) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
@@ -60,7 +79,9 @@
 
 **Merged pull requests:**
 
+- chore\(deps\): bump faker from 2.4.0 to 2.5.0 [\#59](https://github.com/faker-ruby/faker-bot/pull/59) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Release v0.5.0 [\#41](https://github.com/faker-ruby/faker-bot/pull/41) ([akabiru](https://github.com/akabiru))
+- Add CI & QA Badges [\#34](https://github.com/faker-ruby/faker-bot/pull/34) ([akabiru](https://github.com/akabiru))
 - Chore: CleanUp [\#32](https://github.com/faker-ruby/faker-bot/pull/32) ([akabiru](https://github.com/akabiru))
 
 ## [v0.4.5](https://github.com/faker-ruby/faker-bot/tree/v0.4.5) (2019-07-11)
@@ -122,10 +143,6 @@
 
 - Handle Deprecation Warnings [\#7](https://github.com/faker-ruby/faker-bot/issues/7)
 - Support `search` for ruby less than 2.4.0 [\#12](https://github.com/faker-ruby/faker-bot/pull/12) ([kfpo](https://github.com/kfpo))
-
-**Merged pull requests:**
-
-- Add CI & QA Badges [\#34](https://github.com/faker-ruby/faker-bot/pull/34) ([akabiru](https://github.com/akabiru))
 
 ## [v0.4.1](https://github.com/faker-ruby/faker-bot/tree/v0.4.1) (2018-09-18)
 [Full Changelog](https://github.com/faker-ruby/faker-bot/compare/v0.4.0...v0.4.1)
