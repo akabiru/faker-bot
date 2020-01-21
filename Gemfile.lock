@@ -128,7 +128,7 @@ GEM
       tty-screen (~> 0.6)
       tty-which (~> 0.4)
     tty-screen (0.7.0)
-    tty-tree (0.3.0)
+    tty-tree (0.4.0)
     tty-which (0.4.1)
     unf (0.1.4)
       unf_ext
