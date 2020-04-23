@@ -2,16 +2,13 @@
 
 require 'bundler/setup'
 
-require 'coveralls'
 require 'pry'
+require 'simplecov'
 
 require 'faker-bot'
 
-Coveralls.wear!
-
 SimpleCov.formatters = [
-  SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter
+  SimpleCov::Formatter::SimpleFormatter
 ]
 SimpleCov.start
 
