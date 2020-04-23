@@ -1,6 +1,6 @@
 # faker-bot
 
-[![Build Status](https://travis-ci.org/faker-ruby/faker-bot.svg?branch=master)](https://travis-ci.org/faker-ruby/faker-bot)
+![CI](https://github.com/faker-ruby/faker-bot/workflows/CI/badge.svg)
 [![Gem Version](https://badge.fury.io/rb/faker-bot.svg)](https://badge.fury.io/rb/faker-bot)
 [![Open Source Helpers](https://www.codetriage.com/faker-ruby/faker-bot/badges/users.svg)](https://www.codetriage.com/faker-ruby/faker-bot)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f40541168a0fafbe1808/maintainability)](https://codeclimate.com/github/faker-ruby/faker-bot/maintainability)
