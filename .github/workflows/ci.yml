@@ -10,7 +10,6 @@ jobs:
       fail-fast: false # don't fail all matrix builds if one fails
       matrix:
         ruby:
-          - '2.3'
           - '2.4'
           - '2.5'
           - '2.6'
@@ -32,12 +31,13 @@ jobs:
         chmod +x ./cc-test-reporter
         ./cc-test-reporter before-build
 
-    - name: Run tests
-      run: bundle exec rake
+    - name: Build and test with RSpec
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rspec
 
     - name: Publish code coverage
-      env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
       run: |
         export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
-        ./cc-test-reporter after-build -r $CC_TEST_REPORTER_ID
+        ./cc-test-reporter after-build -r ${{secrets.CC_TEST_REPORTER_ID}}
