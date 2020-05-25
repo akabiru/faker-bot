@@ -4,15 +4,40 @@ on: [push]
 
 jobs:
   test:
+    name: Ruby ${{ matrix.ruby }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # don't fail all matrix builds if one fails
+      matrix:
+        ruby:
+          - '2.3'
+          - '2.4'
+          - '2.5'
+          - '2.6'
+          - '2.7'
+          - 'head'
+    continue-on-error: ${{ endsWith(matrix.ruby, 'head') }}
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
+    - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
-    - name: Build and test with Rake
+        ruby-version: ${{ matrix.ruby }}
+
+    - name: Install dependencies
+      run: bundle install
+
+    - name: Setup Code Climate test-reporter
       run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
-        bundle exec rake
+        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        chmod +x ./cc-test-reporter
+        ./cc-test-reporter before-build
+
+    - name: Run tests
+      run: bundle exec rake
+
+    - name: Publish code coverage
+      env:
+        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      run: |
+        export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
+        ./cc-test-reporter after-build -r $CC_TEST_REPORTER_ID
