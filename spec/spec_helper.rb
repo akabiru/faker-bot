@@ -7,9 +7,6 @@ require 'simplecov'
 
 require 'faker-bot'
 
-SimpleCov.formatters = [
-  SimpleCov::Formatter::SimpleFormatter
-]
 SimpleCov.start
 
 RSpec.configure do |config|
