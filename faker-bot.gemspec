@@ -35,5 +35,5 @@ Gem::Specification.new do |spec|
   # Workaround for cc-test-reporter with SimpleCov 0.18.
   # Stop upgrading SimpleCov until the following issue will be resolved.
   # https://github.com/codeclimate/test-reporter/issues/418
-  spec.add_development_dependency "simplecov", "~> 0.10", "< 0.18"
+  spec.add_development_dependency "simplecov", "~> 0.10", "< 0.19"
 end

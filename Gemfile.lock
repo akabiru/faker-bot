@@ -38,7 +38,6 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
-    json (2.3.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -92,11 +91,10 @@ GEM
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     shellany (0.0.1)
-    simplecov (0.17.1)
+    simplecov (0.18.5)
       docile (~> 1.1)
-      json (>= 1.8, < 3)
-      simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.2)
+      simplecov-html (~> 0.11)
+    simplecov-html (0.12.2)
     strings (0.1.8)
       strings-ansi (~> 0.1)
       unicode-display_width (~> 1.5)
@@ -123,7 +121,7 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 0.85.0)
-  simplecov (~> 0.10, < 0.18)
+  simplecov (~> 0.10, < 0.19)
 
 BUNDLED WITH
    2.1.4
