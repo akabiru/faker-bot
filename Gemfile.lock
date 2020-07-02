@@ -3,11 +3,11 @@ PATH
   specs:
     faker-bot (0.5.3)
       faker
-      pastel (~> 0.7.2)
+      pastel (~> 0.7)
       thor (>= 0.20, < 1.1)
-      tty-pager
-      tty-screen
-      tty-tree
+      tty-pager (~> 0.13)
+      tty-screen (~> 0.8)
+      tty-tree (~> 0.4)
 
 GEM
   remote: https://rubygems.org/
