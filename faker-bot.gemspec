@@ -1,7 +1,4 @@
-
-lib = File.expand_path("../lib", __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "faker/bot/version"
+require_relative "lib/faker/bot/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "faker-bot"
@@ -14,17 +11,18 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/faker-ruby/faker-bot"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = 'bin'
-  spec.executables   = ['faker']
-  spec.require_paths = ['lib']
+  spec.files         = Dir["lib/**/*", "CHANGELOG.md", "LICENSE.txt", "README.md"]
+  spec.bindir        = "bin"
+  spec.executables   = ["faker"]
+  spec.require_paths = ["lib"]
+  spec.required_ruby_version = ">= 2.5"
 
   spec.add_dependency "faker"
-  spec.add_dependency "pastel", "~> 0.7.2"
+  spec.add_dependency "pastel", "~> 0.7"
   spec.add_dependency "thor", ">= 0.20", "< 1.1"
-  spec.add_dependency "tty-pager"
-  spec.add_dependency "tty-screen"
-  spec.add_dependency "tty-tree"
+  spec.add_dependency "tty-pager", "~> 0.13"
+  spec.add_dependency "tty-screen", "~> 0.8"
+  spec.add_dependency "tty-tree", "~> 0.4"
 
   spec.add_development_dependency "bundler", ">= 1.16"
   spec.add_development_dependency "guard-rspec"
