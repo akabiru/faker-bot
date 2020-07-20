@@ -107,7 +107,7 @@ GEM
     tty-pager (0.13.0)
       strings (~> 0.1.8)
       tty-screen (~> 0.8)
-    tty-screen (0.8.0)
+    tty-screen (0.8.1)
     tty-tree (0.4.0)
     unicode-display_width (1.7.0)
     unicode_utils (1.4.0)
