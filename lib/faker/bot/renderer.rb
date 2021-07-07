@@ -5,6 +5,8 @@ require 'tty/pager'
 require 'tty/screen'
 require 'tty/tree'
 
+require_relative 'emoji_store'
+
 module Faker
   module Bot
     # A class responsible for printing output to an [IO] interface
@@ -117,8 +119,10 @@ module Faker
       # @api private
       #
       def node(const, methods)
+        emoji = EmojiStore.fetch(const.to_s)
+
         {
-          crayon.green(const.to_s) => leaf(const, methods)
+          "#{emoji}  #{crayon.green(const.to_s)}" => leaf(const, methods)
         }
       end
 
