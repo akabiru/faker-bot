@@ -15,21 +15,21 @@ Gem::Specification.new do |spec|
   spec.bindir        = "bin"
   spec.executables   = ["faker"]
   spec.require_paths = ["lib"]
-  spec.required_ruby_version = ">= 2.5"
+  spec.required_ruby_version = ">= 3.3.4"
 
   spec.add_dependency "faker"
-  spec.add_dependency "pastel", "~> 0.7"
-  spec.add_dependency "thor", ">= 0.20", "< 1.1"
-  spec.add_dependency "tty-pager", "~> 0.13"
-  spec.add_dependency "tty-screen", "~> 0.8"
-  spec.add_dependency "tty-tree", "~> 0.4"
+  spec.add_dependency "pastel"
+  spec.add_dependency "thor"
+  spec.add_dependency "tty-pager"
+  spec.add_dependency "tty-screen"
+  spec.add_dependency "tty-tree"
 
-  spec.add_development_dependency "bundler", ">= 1.16"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "pry"
-  spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "rubocop", "~> 1.5.0"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rubocop"
   # Workaround for cc-test-reporter with SimpleCov 0.18.
   # Stop upgrading SimpleCov until the following issue will be resolved.
   # https://github.com/codeclimate/test-reporter/issues/418
