@@ -4,18 +4,17 @@ RSpec.describe '`faker list` command', type: :cli do
   it 'executes `faker help list` command successfully' do
     output = `faker help list`
     expected_output = <<~OUT
-      Usage:
-        faker list
+Usage:
+  faker list
 
-      Options:
-        -h, [--help], [--no-help]                  # Display usage information
-        -m, [--show-methods], [--no-show-methods]  # Display Faker constants with methods
-                                                   # Default: true
-        -v, [--verbose], [--no-verbose]            # Include sample Faker output
+Options:
+  -h, [--help], [--no-help], [--skip-help]                          # Display usage information
+  -m, [--show-methods], [--no-show-methods], [--skip-show-methods]  # Display Faker constants with methods
+                                                                    # Default: true
+  -v, [--verbose], [--no-verbose], [--skip-verbose]                 # Include sample Faker output
 
-      List all Faker constants
+List all Faker constants
     OUT
-
     expect(output).to match(expected_output)
   end
 
